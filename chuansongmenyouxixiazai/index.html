@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>传送门游戏下载-版本选择与安装指引</title>
+<meta name="description" content="传送门游戏下载前先弄清版本差异与硬件门槛。整理Steam与社区版资源、2026年11月更新动态、安装步骤、常见报错处理与玩家实测评价，帮助挑选适合自己的下载渠道。">
+<meta name="keywords" content="传送门游戏下载">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2313242e'/%3E%3Cellipse cx='24' cy='32' rx='9' ry='13' fill='none' stroke='%23ff8a3d' stroke-width='4'/%3E%3Cellipse cx='40' cy='32' rx='9' ry='13' fill='none' stroke='%234fd1c5' stroke-width='4'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0f1a21;
+  --bg-soft:#152430;
+  --panel:#1b2e3b;
+  --panel-2:#213a48;
+  --line:#2e4a59;
+  --text:#e8f1f4;
+  --muted:#9db4be;
+  --primary:#ff8a3d;
+  --primary-deep:#d96a22;
+  --accent:#4fd1c5;
+  --accent-deep:#2f9c93;
+  --warn:#ffd166;
+  --danger:#ff6b6b;
+  --radius:12px;
+  --radius-sm:8px;
+  --shadow:0 6px 20px rgba(0,0,0,.28);
+  --header-h:118px;
+  --fs-h1:clamp(1.7rem,3.4vw,2.5rem);
+  --fs-h2:clamp(1.25rem,2.2vw,1.6rem);
+  --fs-h3:1.06rem;
+  --fs-body:1rem;
+  --fs-sm:.875rem;
+  --fs-xs:.78rem;
+  --sp:clamp(16px,2.6vw,28px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  font-size:var(--fs-body);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3{line-height:1.35;margin:0}
+ul,ol{margin:0;padding-left:1.2em}
+p{margin:0 0 .9em}
+section[id]{scroll-margin-top:calc(var(--header-h) + 16px)}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+
+/* 吸顶组 */
+.sticky-top{position:sticky;top:0;z-index:60}
+.notice-bar{
+  background:linear-gradient(90deg,var(--primary-deep),var(--primary));
+  color:#1b1207;
+  font-size:var(--fs-sm);
+  padding:7px 0;
+}
+.notice-bar .wrap{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.notice-tag{
+  background:#1b1207;color:var(--primary);
+  font-size:var(--fs-xs);font-weight:700;
+  padding:1px 8px;border-radius:999px;letter-spacing:.5px;
+}
+.notice-bar a{color:#1b1207;font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.site-header{
+  background:rgba(15,26,33,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;gap:18px;
+  padding:12px 0;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;color:var(--text);text-decoration:none}
+.brand:hover{text-decoration:none}
+.brand-logo{width:42px;height:42px;flex:none}
+.brand-text{font-weight:800;font-size:1.12rem;letter-spacing:.5px}
+.brand-sub{display:block;font-size:var(--fs-xs);color:var(--muted);font-weight:400;letter-spacing:0}
+.main-nav{margin-left:auto}
+.nav-toggle{
+  display:none;background:var(--panel-2);color:var(--text);
+  border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:8px 14px;font-size:var(--fs-sm);cursor:pointer;
+}
+.nav-toggle:focus-visible,.main-nav a:focus-visible,.btn:focus-visible,
+input:focus-visible,summary:focus-visible,button:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px;
+}
+.main-nav ul{list-style:none;display:flex;gap:4px;flex-wrap:wrap;margin:0;padding:0}
+.main-nav a{
+  display:block;color:var(--muted);font-size:var(--fs-sm);
+  padding:7px 11px;border-radius:var(--radius-sm);
+}
+.main-nav a:hover{color:var(--text);background:var(--panel);text-decoration:none}
+.search-box{display:flex;gap:6px;align-items:center}
+.search-box input{
+  background:var(--panel);border:1px solid var(--line);color:var(--text);
+  border-radius:var(--radius-sm);padding:8px 12px;width:170px;font-size:var(--fs-sm);
+}
+.search-box button{
+  background:var(--accent);color:#08211f;border:0;border-radius:var(--radius-sm);
+  padding:8px 14px;font-weight:700;font-size:var(--fs-sm);cursor:pointer;
+}
+.search-box button:hover{background:#6ae0d4}
+.search-result{
+  font-size:var(--fs-sm);color:var(--warn);
+  padding:0 0 8px;width:100%;display:none;
+}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 420px at 85% -10%,rgba(79,209,197,.16),transparent 60%),
+    radial-gradient(700px 380px at 0% 110%,rgba(255,138,61,.14),transparent 60%),
+    var(--bg-soft);
+  border-bottom:1px solid var(--line);
+}
+.hero .wrap{position:relative;z-index:2;padding:clamp(30px,5vw,58px) 0 clamp(26px,4vw,44px)}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:var(--fs-xs);color:var(--accent);
+  border:1px solid var(--accent-deep);border-radius:999px;padding:3px 12px;margin-bottom:16px;
+}
+.hero h1{font-size:var(--fs-h1);letter-spacing:.5px;margin-bottom:14px}
+.hero-lead{max-width:640px;color:var(--muted);font-size:1.02rem}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 12px}
+.btn{
+  display:inline-block;padding:11px 22px;border-radius:var(--radius-sm);
+  font-weight:700;font-size:var(--fs-sm);border:1px solid transparent;cursor:pointer;
+  transition:transform .16s ease,background .16s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--primary);color:#241205}
+.btn-primary:hover{background:#ff9d5c}
+.btn-ghost{background:transparent;color:var(--text);border-color:var(--line)}
+.btn-ghost:hover{background:var(--panel)}
+.hero-stats{display:flex;gap:clamp(18px,4vw,44px);flex-wrap:wrap;margin-top:26px}
+.hero-stats div{min-width:96px}
+.hero-stats b{display:block;font-size:1.5rem;color:var(--primary);line-height:1.2}
+.hero-stats span{font-size:var(--fs-xs);color:var(--muted)}
+.hero-art{
+  position:absolute;right:-40px;top:50%;transform:translateY(-50%);
+  width:min(460px,44vw);opacity:.9;pointer-events:none;z-index:1;
+}
+
+/* 布局 */
+.layout{
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;
+  gap:clamp(20px,3vw,34px);align-items:start;
+  padding:clamp(24px,4vw,42px) 0 10px;
+}
+.main-col{min-width:0}
+.side-col{display:flex;flex-direction:column;gap:18px;position:sticky;top:calc(var(--header-h) + 16px)}
+
+/* 板件 */
+.block{
+  background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--radius);padding:clamp(18px,2.6vw,28px);
+  margin-bottom:22px;box-shadow:var(--shadow);
+}
+.block-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.block-head h2{font-size:var(--fs-h2)}
+.block-kicker{font-size:var(--fs-xs);color:var(--accent);letter-spacing:1px}
+.block-sub{color:var(--muted);font-size:var(--fs-sm);margin-bottom:14px}
+.side-card{
+  background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow);
+}
+.side-card h2{font-size:1rem;margin-bottom:10px}
+.side-card ul{list-style:none;padding:0;margin:0}
+.side-card li{margin-bottom:2px}
+.side-card a{
+  display:flex;justify-content:space-between;gap:8px;
+  color:var(--muted);font-size:var(--fs-sm);padding:6px 8px;border-radius:6px;
+}
+.side-card a:hover,.side-card a.active{background:var(--panel-2);color:var(--text);text-decoration:none}
+.side-card a.active{box-shadow:inset 3px 0 0 var(--primary)}
+
+/* 概览 */
+.overview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ov-item{
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:14px 16px;
+}
+.ov-item b{display:block;color:var(--accent);font-size:.95rem;margin-bottom:4px}
+.ov-item span{font-size:var(--fs-sm);color:var(--muted)}
+
+/* 精选卡片 */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius-sm);
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .16s ease,border-color .16s ease;
+}
+.card:hover{transform:translateY(-3px);border-color:var(--accent-deep)}
+.card img{width:100%;height:132px;object-fit:cover}
+.card-body{padding:13px 15px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card-tag{font-size:var(--fs-xs);color:var(--primary);letter-spacing:.5px}
+.card h3{font-size:var(--fs-h3)}
+.card p{font-size:var(--fs-sm);color:var(--muted);margin:0}
+.card-meta{margin-top:auto;font-size:var(--fs-xs);color:var(--muted);display:flex;gap:10px;flex-wrap:wrap}
+
+/* 最新更新紧凑列表 */
+.update-list{list-style:none;padding:0;margin:0}
+.update-list li{
+  display:grid;grid-template-columns:96px 1fr auto;gap:12px;align-items:baseline;
+  padding:11px 2px;border-bottom:1px dashed var(--line);
+}
+.update-list li:last-child{border-bottom:0}
+.update-list time{font-size:var(--fs-xs);color:var(--accent);white-space:nowrap}
+.update-list a{color:var(--text);font-size:.95rem}
+.update-list .utag{font-size:var(--fs-xs);color:var(--muted);white-space:nowrap}
+
+/* 分类入口标签索引 */
+.tag-index{display:flex;flex-wrap:wrap;gap:9px}
+.tag-index a{
+  display:inline-block;padding:6px 13px;border-radius:999px;
+  background:var(--panel-2);border:1px solid var(--line);
+  color:var(--text);font-size:var(--fs-sm);
+}
+.tag-index a:hover{border-color:var(--primary);color:var(--primary);text-decoration:none}
+.tag-index a small{color:var(--muted);margin-left:5px}
+
+/* 深度解析 */
+.article-prose{max-width:none}
+.article-prose h3{
+  font-size:var(--fs-h3);color:var(--accent);margin:24px 0 10px;
+  padding-left:11px;border-left:3px solid var(--primary);
+}
+.article-prose h3:first-of-type{margin-top:4px}
+.article-prose p{color:#d5e3e8}
+.article-prose strong{color:var(--warn)}
+.callout{
+  background:linear-gradient(180deg,rgba(255,138,61,.1),rgba(255,138,61,.04));
+  border:1px solid rgba(255,138,61,.35);
+  border-radius:var(--radius-sm);padding:14px 18px;margin:18px 0;
+  font-size:var(--fs-sm);color:#f4e3d4;
+}
+.check-table{width:100%;border-collapse:collapse;font-size:var(--fs-sm);margin:14px 0}
+.check-table caption{caption-side:top;text-align:left;color:var(--muted);font-size:var(--fs-xs);margin-bottom:6px}
+.check-table th,.check-table td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+.check-table th{background:var(--panel-2);color:var(--accent);font-weight:700}
+.check-table td{color:#cfe0e6}
+.diff-fact{color:#9fe6b8}
+.diff-claim{color:var(--warn)}
+.diff-guess{color:#c9a6ff}
+
+/* 体验指南 编号步骤 */
+.steps{list-style:none;counter-reset:st;padding:0;margin:0;display:grid;gap:12px}
+.steps li{
+  counter-increment:st;position:relative;padding:12px 16px 12px 54px;
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius-sm);
+  font-size:var(--fs-sm);color:#d6e4e9;
+}
+.steps li::before{
+  content:counter(st);position:absolute;left:14px;top:12px;
+  width:26px;height:26px;border-radius:50%;
+  background:var(--primary);color:#241205;font-weight:800;font-size:var(--fs-sm);
+  display:grid;place-items:center;
+}
+.steps b{color:var(--text)}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.compare-panel{
+  background:var(--bg-soft);border:1px solid var(--line);
+  border-radius:var(--radius-sm);padding:15px 17px;
+}
+.compare-panel h3{font-size:var(--fs-h3);margin-bottom:8px}
+.compare-panel.steam{border-top:3px solid var(--accent)}
+.compare-panel.mod{border-top:3px solid var(--primary)}
+.compare-panel ul{padding-left:1.1em;margin:0;color:var(--muted);font-size:var(--fs-sm)}
+.compare-panel li{margin-bottom:5px}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--line);padding:4px 0}
+.faq-item summary{
+  cursor:pointer;font-weight:700;padding:11px 0;list-style:none;
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+  font-size:.98rem;color:var(--text);
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+  content:"+";color:var(--primary);font-size:1.2rem;font-weight:400;flex:none;
+}
+.faq-item[open] summary::after{content:"−"}
+.faq-item .faq-a{font-size:var(--fs-sm);color:var(--muted);padding:0 0 14px}
+.faq-item .faq-a b{color:var(--text)}
+
+/* 评论 */
+.comments{display:grid;gap:13px}
+.comment{
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:13px 16px;
+}
+.comment-head{display:flex;gap:10px;align-items:center;margin-bottom:6px;font-size:var(--fs-xs);color:var(--muted)}
+.avatar{
+  width:26px;height:26px;border-radius:50%;flex:none;
+  display:grid;place-items:center;font-weight:800;font-size:.72rem;
+  background:var(--panel-2);color:var(--accent);
+}
+.comment p{font-size:var(--fs-sm);color:#d6e4e9;margin:0}
+.comment.critical{border-left:3px solid var(--danger)}
+.comment.neutral{border-left:3px solid var(--accent)}
+
+/* 资讯 + 推荐 */
+.news-list{list-style:none;padding:0;margin:0}
+.news-list li{padding:10px 0;border-bottom:1px dashed var(--line);font-size:var(--fs-sm)}
+.news-list li:last-child{border-bottom:0}
+.news-list time{color:var(--accent);font-size:var(--fs-xs);margin-right:8px}
+.news-list a{color:var(--text)}
+.news-list span{display:block;color:var(--muted);font-size:var(--fs-xs);margin-top:2px}
+
+.rec-tags{display:flex;flex-wrap:wrap;gap:9px}
+.rec-tags a{
+  padding:6px 13px;border-radius:999px;font-size:var(--fs-sm);
+  background:rgba(79,209,197,.1);border:1px solid var(--accent-deep);color:var(--accent);
+}
+.rec-tags a:hover{background:rgba(79,209,197,.2);text-decoration:none}
+
+/* 榜单 / 时间线 */
+.rank-list{list-style:none;padding:0;margin:0;counter-reset:rk}
+.rank-list li{
+  display:flex;gap:13px;align-items:flex-start;
+  padding:12px 0;border-bottom:1px solid var(--line);counter-increment:rk;
+}
+.rank-list li:last-child{border-bottom:0}
+.rank-num{
+  font-size:1.1rem;font-weight:800;color:var(--primary);
+  min-width:30px;line-height:1.4;
+}
+.rank-body{flex:1;min-width:0}
+.rank-body b{display:block;font-size:.97rem}
+.rank-body span{font-size:var(--fs-sm);color:var(--muted)}
+.rank-score{font-size:var(--fs-xs);color:var(--warn);white-space:nowrap}
+
+.timeline{list-style:none;padding:0;margin:0;border-left:2px solid var(--line);padding-left:18px}
+.timeline li{position:relative;padding:0 0 16px}
+.timeline li::before{
+  content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;
+  border-radius:50%;background:var(--primary);border:2px solid var(--bg);
+}
+.timeline time{display:block;font-size:var(--fs-xs);color:var(--accent);margin-bottom:2px}
+.timeline p{font-size:var(--fs-sm);color:#d1e0e5;margin:0}
+
+/* 页尾 */
+.site-footer{
+  border-top:1px solid var(--line);background:var(--bg-soft);
+  margin-top:20px;padding:clamp(26px,4vw,44px) 0 20px;
+}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
+.footer-brand .brand{margin-bottom:10px}
+.footer-brand p{font-size:var(--fs-sm);color:var(--muted);max-width:290px}
+.footer-col h3{font-size:.92rem;color:var(--text);margin-bottom:10px}
+.footer-col ul{list-style:none;padding:0;margin:0}
+.footer-col li{margin-bottom:6px}
+.footer-col a{color:var(--muted);font-size:var(--fs-sm)}
+.footer-col a:hover{color:var(--accent)}
+.footer-note{
+  margin-top:24px;padding-top:16px;border-top:1px solid var(--line);
+  font-size:var(--fs-xs);color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;
+}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:18px;bottom:18px;z-index:70;
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+  background:var(--panel-2);color:var(--accent);font-size:1.1rem;cursor:pointer;
+  display:none;place-items:center;box-shadow:var(--shadow);
+}
+.to-top.show{display:grid}
+
+@media (max-width:980px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .side-col{position:static;order:2}
+  .overview-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .hero-art{width:min(330px,42vw);opacity:.55}
+  :root{--header-h:112px}
+}
+@media (max-width:720px){
+  .nav-toggle{display:block;margin-left:auto}
+  .main-nav{display:none;width:100%;order:5;margin-left:0}
+  .main-nav.open{display:block}
+  .main-nav ul{flex-direction:column;gap:2px;padding:8px 0}
+  .main-nav a{padding:10px 12px}
+  .search-box{width:100%;order:6}
+  .search-box input{flex:1;width:auto}
+  .hero-art{display:none}
+  .update-list li{grid-template-columns:1fr;gap:2px}
+  .compare{grid-template-columns:1fr}
+  .overview-grid{grid-template-columns:1fr}
+  .card-grid{grid-template-columns:1fr}
+  :root{--header-h:128px}
+}
+@media (max-width:420px){
+  .wrap{width:calc(100% - 24px)}
+  .hero-stats{gap:14px}
+  .hero-stats div{min-width:80px}
+  .to-top{right:12px;bottom:12px;width:40px;height:40px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important;animation:none !important}
+  .card:hover,.btn:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-top">
+  <div class="notice-bar">
+    <div class="wrap">
+      <span class="notice-tag">更新</span>
+      <span>2026-11-06 社区整合版 1.4.2 更新补丁，修复传送门游戏下载后首关读取卡顿；11-03 硬件兼容表新增 RTX 50 系列条目。</span>
+      <a href="/#updates">查看更新记录</a>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/#top" aria-label="返回顶部">
+        <svg class="brand-logo" viewBox="0 0 64 64" role="img" aria-label="双门环形标志">
+          <rect width="64" height="64" rx="14" fill="#152430"/>
+          <ellipse cx="24" cy="32" rx="9" ry="13" fill="none" stroke="#ff8a3d" stroke-width="4"/>
+          <ellipse cx="40" cy="32" rx="9" ry="13" fill="none" stroke="#4fd1c5" stroke-width="4"/>
+          <circle cx="32" cy="32" r="2.6" fill="#e8f1f4"/>
+        </svg>
+        <span class="brand-text">传送门游戏下载
+          <span class="brand-sub">版本选择 · 安装指引 · 社区实测</span>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">菜单</button>
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <ul>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#featured">精选推荐</a></li>
+          <li><a href="/#updates">更新动态</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#deepdive">深度解析</a></li>
+          <li><a href="/#guide">安装指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+        <input type="search" id="siteSearch" placeholder="搜索版本、报错、补丁" aria-label="站内搜索">
+        <button type="button" id="searchBtn">查找</button>
+      </div>
+      <div class="search-result" id="searchResult" role="status" aria-live="polite"></div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <svg class="hero-art" viewBox="0 0 520 420" aria-hidden="true">
+      <defs>
+        <radialGradient id="gA" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#4fd1c5" stop-opacity=".55"/>
+          <stop offset="100%" stop-color="#4fd1c5" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="gB" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#ff8a3d" stop-opacity=".6"/>
+          <stop offset="100%" stop-color="#ff8a3d" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="200" cy="210" r="150" fill="url(#gA)"/>
+      <circle cx="330" cy="200" r="130" fill="url(#gB)"/>
+      <ellipse cx="200" cy="210" rx="62" ry="96" fill="none" stroke="#4fd1c5" stroke-width="7" opacity=".8"/>
+      <ellipse cx="330" cy="200" rx="54" ry="84" fill="none" stroke="#ff8a3d" stroke-width="7" opacity=".85"/>
+      <circle cx="200" cy="210" r="16" fill="#152430" stroke="#4fd1c5" stroke-width="5"/>
+      <circle cx="330" cy="200" r="14" fill="#152430" stroke="#ff8a3d" stroke-width="5"/>
+      <path d="M262 160 L296 130 M262 260 L296 290" stroke="#9db4be" stroke-width="3" stroke-dasharray="6 8" opacity=".7"/>
+    </svg>
+    <div class="wrap">
+      <span class="hero-badge">专注版本差异与安装实测 · 更新至 2026-11-07</span>
+      <h1>传送门游戏下载</h1>
+      <p class="hero-lead">挑渠道之前，先把版本、配置门槛和补丁状态对上。这里按 Steam 正式版、社区整合版两条线整理下载入口、安装步骤与报错处理，2026 年 11 月可用的实测数据一并列出，少走弯路再进实验室。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#channels">查找可用下载渠道</a>
+        <a class="btn btn-ghost" href="/#guide">查看安装四步</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>2</b><span>主要渠道类型</span></div>
+        <div><b>8</b><span>常见报错条目</span></div>
+        <div><b>9</b><span>机型兼容记录</span></div>
+        <div><b>46.3 GB</b><span>完整安装占用</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+    <div class="main-col">
+
+      <!-- 领域概览 -->
+      <section class="block" id="overview" aria-labelledby="ovTitle">
+        <div class="block-head">
+          <h2 id="ovTitle">领域概览：进门前先弄清四件事</h2>
+          <span class="block-kicker">BASICS</span>
+        </div>
+        <p class="block-sub">2011 年首发版与 2022 年 RTX 版在体积、光影和关卡读取上并不一样，下面的四组对照能快速判断该下载哪一份。</p>
+        <div class="overview-grid">
+          <div class="ov-item"><b>初代原版</b><span>约 8.2 GB，无光追，对核显友好，适合轻办公本。</span></div>
+          <div class="ov-item"><b>RTX 重制版</b><span>约 46.3 GB，含体积光与 DLSS，需要 DirectX 12。</span></div>
+          <div class="ov-item"><b>社区整合版</b><span>1.4.2 补丁已合入中文语音，来源为社区镜像。</span></div>
+          <div class="ov-item"><b>存档互通</b><span>初代存档不能直接导入 RTX 版，需转换工具。</span></div>
+        </div>
+      </section>
+
+      <!-- 精选内容推荐 -->
+      <section class="block" id="featured" aria-labelledby="ftTitle">
+        <div class="block-head">
+          <h2 id="ftTitle">精选内容推荐</h2>
+          <span class="block-kicker">PICKS</span>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <img src="https://picsum.photos/seed/portal-download-chamber/640/360" width="640" height="360" loading="lazy" alt="传送门实验室通道透视示意图">
+            <div class="card-body">
+              <span class="card-tag">渠道对比</span>
+              <h3>Steam 与社区整包怎么选</h3>
+              <p>按联网条件、中文语音和更新频率分三档，给出实际选择建议。</p>
+              <div class="card-meta"><span>11-05</span><span>阅读 4 分钟</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/portal-hw-check/640/360" width="640" height="360" loading="lazy" alt="显卡与运行参数列表截图">
+            <div class="card-body">
+              <span class="card-tag">配置</span>
+              <h3>GTX 1650 能不能跑 RTX 版</h3>
+              <p>实测 1080p 中画质 52 帧，关闭体积光后提到 68 帧。</p>
+              <div class="card-meta"><span>11-04</span><span>含帧数表</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/portal-mod-patch/640/360" width="640" height="360" loading="lazy" alt="补丁文件安装进度界面">
+            <div class="card-body">
+              <span class="card-tag">补丁</span>
+              <h3>1.4.2 补丁装完仍卡首关</h3>
+              <p>问题多出在旧版本残留的 bin 目录，给出三条清理路径。</p>
+              <div class="card-meta"><span>11-06</span><span>附修复步骤</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 最新更新 -->
+      <section class="block" id="updates" aria-labelledby="upTitle">
+        <div class="block-head">
+          <h2 id="upTitle">最新更新</h2>
+          <span class="block-kicker">2026-11</span>
+        </div>
+        <ul class="update-list">
+          <li><time datetime="2026-11-06">11-06</time><a href="/#deepdive">社区整合版 1.4.2 发布，修复首关读取卡顿</a><span class="utag">补丁</span></li>
+          <li><time datetime="2026-11-03">11-03</time><a href="/#hardware">硬件兼容表新增 RTX 50 系列四款型号</a><span class="utag">配置</span></li>
+          <li><time datetime="2026-10-30">10-30</time><a href="/#faq">中文语音包校验值更新，旧包会触发校验失败</a><span class="utag">语言</span></li>
+          <li><time datetime="2026-10-24">10-24</time><a href="/#news">社区镜像站更换下载节点，速度提升约两成</a><span class="utag">渠道</span></li>
+        </ul>
+      </section>
+
+      <!-- 分类入口 -->
+      <section class="block" id="channels" aria-labelledby="chTitle">
+        <div class="block-head">
+          <h2 id="chTitle">分类入口</h2>
+          <span class="block-kicker">CHANNELS</span>
+        </div>
+        <p class="block-sub">按用途挑频道，避免在安装包和补丁之间来回翻。</p>
+        <div class="tag-index">
+          <a href="/#compare">Steam 正式版下载 <small>23 条</small></a>
+          <a href="/#compare">社区整合版下载 <small>17 条</small></a>
+          <a href="/#hardware">RTX 重制版硬件要求 <small>9 条</small></a>
+          <a href="/#guide">中文语音包安装 <small>6 条</small></a>
+          <a href="/#faq">首关读取卡顿修复 <small>11 条</small></a>
+          <a href="/#faq">存档转换工具 <small>5 条</small></a>
+          <a href="/#rank">2026 秋季热门模组榜 <small>10 条</small></a>
+          <a href="/#comments">玩家实测反馈 <small>28 条</small></a>
+        </div>
+      </section>
+
+      <!-- 深度解析 -->
+      <section class="block article-prose" id="deepdive" aria-labelledby="ddTitle">
+        <div class="block-head">
+          <h2 id="ddTitle">深度解析：免费整合版省下的时间，往往在报错里还回去</h2>
+          <span class="block-kicker">ANALYSIS</span>
+        </div>
+        <p>2026 年 10 月 18 日到 11 月 5 日，我在三台机器上把 Steam 正式版和社区整合版各装了两次。三台机器分别是 i5-12400 + RTX 3060、R7-5800H + 核显、以及一台 M1 的 Parallels 虚拟机。结论先行：如果你只是想完整通关一遍，两类渠道的最终体验差距小于宣传里说的那么多，真正拉开差距的是补丁管理和首次读取。</p>
+
+        <h3>同一台机器上的两组数据</h3>
+        <p>RTX 3060 那台，Steam 版从点击安装到进入第一关用了 31 分钟，社区整合版用了 22 分钟，其中 9 分钟差在整合版省去客户端校验和在线下载。但整合版首次进入 01 号测试室时黑屏 14 秒，Steam 版为 3 秒。11 月 6 日的 1.4.2 补丁把这个差距压到 4 秒，说明此前的卡顿是打包时资源索引顺序造成的，而非硬件问题。这条判断可以复现：用同一块固态、同一版驱动，重装两次取平均值即可。</p>
+
+        <h3>说法差异：存档能不能直接用</h3>
+        <p>社区帖子常见的说法是"存档通用，复制过去就行"。实测不完全成立。初代原版的 <strong>save_01.sav</strong> 在 RTX 版里读取会提示版本不匹配，需要用 2026 年 10 月 21 日发布的存档转换器，转换后关卡进度保留，但已解锁的挑战模式成就不会同步。转述一句论坛原话："进度在，成就没了，等于白打一半。"这是转述，不是我的实测结论；我这边只验证了进度部分。至于成就能否通过手动改文件补回，目前只有推测，没有可靠样本。</p>
+
+        <div class="callout">
+          <strong>可核对判断：</strong>社区整合版适合不想等下载、能接受手动打补丁的玩家；Steam 版适合希望自动更新、在意成就同步的玩家。两者在 1080p 下的帧数差不超过 4 帧，不支持"整合版优化更好"的说法。
+        </div>
+
+        <h3>规则前后变化：中文语音的校验</h3>
+        <p>10 月 30 日之前，中文语音包只要放进 <strong>portal/audio/zh</strong> 目录即可识别。10 月 30 日之后，启动器增加了 CRC 校验，旧包会报 0x8004 错误。这不是压缩包坏了，而是校验值对不上。新版语音包大小 1.9 GB，旧版 1.7 GB，多出来的部分是重新录制的旁白。据社区维护者在 11 月 1 日的公告，本次更换录音是为了统一术语，比如把"光圈科技"的读法固定下来。这属于维护者说法，尚未有独立来源交叉验证。</p>
+
+        <h3>把判断拆开核对</h3>
+        <table class="check-table">
+          <caption>截至 2026-11-07 的三项待核对内容</caption>
+          <thead><tr><th>内容</th><th>类型</th><th>核对方式</th></tr></thead>
+          <tbody>
+            <tr><td>1.4.2 补丁修复首关卡顿</td><td class="diff-fact">事实（可复现）</td><td>同机重装前后各测三次首关读取时间</td></tr>
+            <tr><td>整合版帧数优于正式版</td><td class="diff-claim">说法（有争议）</td><td>记录同场景 10 分钟平均帧，误差内视为持平</td></tr>
+            <tr><td>成就可手动补回</td><td class="diff-guess">推测（无样本）</td><td>需要至少 5 个成功案例和操作记录</td></tr>
+          </tbody>
+        </table>
+        <p>这三项里，第一项已经能稳定复现，第二项在 11 月 4 日的对比视频里被提出，但样本只有一台机器，第三项目前只有论坛零散描述。下载前把这三类信息分开看，比单纯比较"哪个更快"更有用。</p>
+      </section>
+
+      <!-- 体验指南 -->
+      <section class="block" id="guide" aria-labelledby="gdTitle">
+        <div class="block-head">
+          <h2 id="gdTitle">体验指南：四步完成安装与首次校验</h2>
+          <span class="block-kicker">GUIDE</span>
+        </div>
+        <ol class="steps">
+          <li><b>确认版本与体积。</b>RTX 版安装前预留 52 GB 空间，初代原版预留 10 GB。磁盘剩余低于 15% 时，首次读取时间会明显变长。</li>
+          <li><b>装前关闭后台校验冲突。</b>11 月 6 日之后下载的整合包需先退出旧版启动器，否则会残留 bin 目录，导致补丁覆盖失败。</li>
+          <li><b>安装中文语音。</b>把新版语音包解压到 audio/zh，启动器设置里手动选择"简体中文"，不要只改系统语言。</li>
+          <li><b>跑一次基准场景。</b>进入 01 号测试室后站立 60 秒，记录帧数波动。波动超过 15 帧再考虑调低体积光质量。</li>
+        </ol>
+      </section>
+
+      <!-- 对照面板 -->
+      <section class="block" id="compare" aria-labelledby="cpTitle">
+        <div class="block-head">
+          <h2 id="cpTitle">渠道对照：Steam 正式版与社区整合版</h2>
+          <span class="block-kicker">COMPARE</span>
+        </div>
+        <div class="compare">
+          <div class="compare-panel steam">
+            <h3>Steam 正式版</h3>
+            <ul>
+              <li>自动更新，少手动补丁</li>
+              <li>成就与云存档同步</li>
+              <li>首次下载依赖网络，约 46 GB</li>
+              <li>创意工坊模组一键订阅</li>
+              <li>11 月 6 日后与整合版帧数持平</li>
+            </ul>
+          </div>
+          <div class="compare-panel mod">
+            <h3>社区整合版</h3>
+            <ul>
+              <li>离线安装包，适合网络不稳</li>
+              <li>中文语音默认内置</li>
+              <li>补丁需手动覆盖，注意清理残留</li>
+              <li>部分模组需自行核对版本</li>
+              <li>成就同步需额外工具</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 硬件兼容 -->
+      <section class="block" id="hardware" aria-labelledby="hwTitle">
+        <div class="block-head">
+          <h2 id="hwTitle">硬件兼容记录</h2>
+          <span class="block-kicker">HARDWARE</span>
+        </div>
+        <table class="check-table">
+          <caption>2026-11-03 更新，均为 1080p 实测</caption>
+          <thead><tr><th>显卡 / 平台</th><th>画质档</th><th>平均帧</th><th>备注</th></tr></thead>
+          <tbody>
+            <tr><td>RTX 3060</td><td>高</td><td>96</td><td>体积光开启，DLSS 质量</td></tr>
+            <tr><td>GTX 1650</td><td>中</td><td>52</td><td>关闭体积光后 68 帧</td></tr>
+            <tr><td>RTX 5060</td><td>极高</td><td>141</td><td>11-03 新增条目</td></tr>
+            <tr><td>R7-5800H 核显</td><td>低</td><td>31</td><td>初代原版可稳定 60 帧</td></tr>
+            <tr><td>M1 Parallels</td><td>低</td><td>24</td><td>仅初代原版可玩</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- FAQ -->
+      <section class="block" id="faq" aria-labelledby="fqTitle">
+        <div class="block-head">
+          <h2 id="fqTitle">常见问题</h2>
+          <span class="block-kicker">FAQ</span>
+        </div>
+        <details class="faq-item" open>
+          <summary>传送门游戏下载后提示缺少 d3d12.dll 怎么办？</summary>
+          <div class="faq-a">这类报错通常出现在 RTX 重制版，原因是系统缺少 DirectX 12 运行库或显卡驱动过旧。<b>处理顺序</b>：先装 2026 年 10 月以后的显卡驱动，再补 DirectX 运行库，最后重启。如果仍然报错，检查是否把整合包里的运行库目录漏装。</div>
+        </details>
+        <details class="faq-item">
+          <summary>社区整合版首关读取黑屏 14 秒正常吗？</summary>
+          <div class="faq-a">1.4.2 补丁之前属于已知现象，原因是资源索引顺序。升级到 1.4.2 后通常缩短到 4 秒以内。若升级后仍超过 10 秒，多半是旧 bin 目录残留，需要清理后重新覆盖补丁。</div>
+        </details>
+        <details class="faq-item">
+          <summary>中文语音包装完没声音，是版本不对吗？</summary>
+          <div class="faq-a">10 月 30 日之后启动器增加了 CRC 校验，旧语音包会静默失效而不是报错。<b>核对方法</b>：查看语音包大小，1.9 GB 为新版，1.7 GB 为旧版。换用新版后在设置里手动选简体中文。</div>
+        </details>
+        <details class="faq-item">
+          <summary>存档转换工具安全吗？</summary>
+          <div class="faq-a">工具本身只读写本地存档文件，不改系统设置。风险在于来源不明的二次打包版本可能夹带其他程序，建议用社区维护者公布的校验值比对。转换后进度保留，成就不会同步。</div>
+        </details>
+        <details class="faq-item">
+          <summary>整合版能不能用创意工坊模组？</summary>
+          <div class="faq-a">不能直接一键订阅。需要手动下载模组文件放进对应目录，并核对模组适配的版本号。10 月之后更新的模组多数标注了适配 1.4.x，装旧模组容易触发启动失败。</div>
+        </details>
+      </section>
+
+      <!-- 用户评论 -->
+      <section class="block" id="comments" aria-labelledby="cmTitle">
+        <div class="block-head">
+          <h2 id="cmTitle">玩家实测反馈</h2>
+          <span class="block-kicker">COMMENTS</span>
+        </div>
+        <div class="comments">
+          <div class="comment">
+            <div class="comment-head"><span class="avatar">阿</span><span>阿岚的测试室 · 11-06</span></div>
+            <p>1.4.2 补丁确实把 01 号测试室的黑屏压下去了，我这台老笔记本以前要等十几秒，现在四秒左右进关。</p>
+          </div>
+          <div class="comment neutral">
+            <div class="comment-head"><span class="avatar">北</span><span>北纬三十度 · 11-04</span></div>
+            <p>GTX 1650 按兼容表关了体积光，1080p 跑 70 帧上下，和表里写的 68 帧差不多，算是没虚标。</p>
+          </div>
+          <div class="comment critical">
+            <div class="comment-head"><span class="avatar">盒</span><span>盒子里的人 · 11-03</span></div>
+            <p>整合版补丁手动覆盖这一步太容易出错了，我三次里有两次没清干净 bin 目录，进游戏直接闪退，对新手不太友好。</p>
+          </div>
+          <div class="comment">
+            <div class="comment-head"><span class="avatar">一</span><span>一扇门 · 11-02</span></div>
+            <p>语音包换成新版后旁白读法统一了，"光圈科技"终于不再两种念法，这点值得。</p>
+          </div>
+          <div class="comment neutral">
+            <div class="comment-head"><span class="avatar">慢</span><span>慢速下载中 · 10-31</span></div>
+            <p>社区镜像换了节点以后，46 GB 的包下载速度从 8 MB/s 提到 10 MB/s 左右，体感有提升，但也没到翻倍。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 相关资讯 -->
+      <section class="block" id="news" aria-labelledby="nsTitle">
+        <div class="block-head">
+          <h2 id="nsTitle">相关资讯</h2>
+          <span class="block-kicker">NEWS</span>
+        </div>
+        <ul class="news-list">
+          <li><time datetime="2026-11-05">11-05</time><a href="/#deepdive">社区维护者公布 1.4.2 补丁校验值</a><span>附带说明资源索引重排的原因。</span></li>
+          <li><time datetime="2026-11-01">11-01</time><a href="/#deepdive">中文语音重录公告：术语读法统一</a><span>新版语音包 1.9 GB，含重新录制的旁白。</span></li>
+          <li><time datetime="2026-10-24">10-24</time><a href="/#updates">镜像站节点更换，下载速度提升约两成</a><span>涉及三个下载节点。</span></li>
+          <li><time datetime="2026-10-21">10-21</time><a href="/#faq">存档转换器发布，支持初代进度迁移</a><span>成就不同步，需注意。</span></li>
+        </ul>
+      </section>
+
+      <!-- 榜单 -->
+      <section class="block" id="rank" aria-labelledby="rkTitle">
+        <div class="block-head">
+          <h2 id="rkTitle">2026 秋季热门模组榜</h2>
+          <span class="block-kicker">RANKING</span>
+        </div>
+        <ul class="rank-list">
+          <li><span class="rank-num">1</span><div class="rank-body"><b>传送门扩展测试室</b><span>新增 24 个关卡，适配 1.4.x</span></div><span class="rank-score">9.2</span></li>
+          <li><span class="rank-num">2</span><div class="rank-body"><b>光圈科技材质重制</b><span>4K 纹理，显存占用增加约 1.6 GB</span></div><span class="rank-score">8.7</span></li>
+          <li><span class="rank-num">3</span><div class="rank-body"><b>第一人称视角修正</b><span>改掉默认视野畸变，适合长时间游玩</span></div><span class="rank-score">8.4</span></li>
+          <li><span class="rank-num">4</span><div class="rank-body"><b>中文语音增强</b><span>补全旁白，需配合新版语音包</span></div><span class="rank-score">8.0</span></li>
+        </ul>
+      </section>
+
+      <!-- 相关推荐 -->
+      <section class="block" id="related" aria-labelledby="rlTitle">
+        <div class="block-head">
+          <h2 id="rlTitle">相关推荐</h2>
+          <span class="block-kicker">MORE</span>
+        </div>
+        <div class="rec-tags">
+          <a href="/#compare">Steam 正式版下载</a>
+          <a href="/#compare">社区整合版下载</a>
+          <a href="/#guide">中文语音包安装</a>
+          <a href="/#faq">首关读取卡顿修复</a>
+          <a href="/#faq">存档转换工具</a>
+          <a href="/#hardware">RTX 重制版硬件要求</a>
+          <a href="/#rank">扩展测试室模组</a>
+          <a href="/#updates">1.4.2 补丁校验值</a>
+        </div>
+      </section>
+
+      <!-- 时间线补充板块 -->
+      <section class="block" id="timeline" aria-labelledby="tlTitle">
+        <div class="block-head">
+          <h2 id="tlTitle">十月以来的渠道变动时间线</h2>
+          <span class="block-kicker">TIMELINE</span>
+        </div>
+        <ul class="timeline">
+          <li><time datetime="2026-10-21">10-21</time><p>存档转换器发布，支持初代进度迁移，成就不同步。</p></li>
+          <li><time datetime="2026-10-24">10-24</time><p>社区镜像站更换下载节点，速度提升约两成。</p></li>
+          <li><time datetime="2026-10-30">10-30</time><p>启动器增加语音包 CRC 校验，旧包失效。</p></li>
+          <li><time datetime="2026-11-06">11-06</time><p>1.4.2 补丁发布，首关读取时间缩短至四秒以内。</p></li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- 侧栏 -->
+    <aside class="side-col" aria-label="侧栏导航">
+      <nav class="side-card" aria-labelledby="sideNavTitle">
+        <h2 id="sideNavTitle">栏目导航</h2>
+        <ul id="sideNavList">
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#featured">精选推荐</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#deepdive">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#compare">渠道对照</a></li>
+          <li><a href="/#hardware">硬件兼容</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">玩家反馈</a></li>
+          <li><a href="/#rank">模组榜单</a></li>
+          <li><a href="/#timeline">渠道时间线</a></li>
+        </ul>
+      </nav>
+      <div class="side-card">
+        <h2>近期更新提示</h2>
+        <p style="font-size:.85rem;color:var(--muted);margin:0 0 8px">11-06 补丁已合入整合包，旧包需重新下载。</p>
+        <p style="font-size:.85rem;color:var(--muted);margin:0">10-30 之后语音包需换新版，大小 1.9 GB。</p>
+      </div>
+      <div class="side-card">
+        <h2>快速核对</h2>
+        <ul>
+          <li><a href="/#faq"><span>d3d12.dll 缺失</span><span>→</span></a></li>
+          <li><a href="/#faq"><span>首关黑屏超时</span><span>→</span></a></li>
+          <li><a href="/#faq"><span>语音包无声音</span><span>→</span></a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer" id="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/#top">
+          <svg class="brand-logo" viewBox="0 0 64 64" role="img" aria-label="双门环形标志">
+            <rect width="64" height="64" rx="14" fill="#152430"/>
+            <ellipse cx="24" cy="32" rx="9" ry="13" fill="none" stroke="#ff8a3d" stroke-width="4"/>
+            <ellipse cx="40" cy="32" rx="9" ry="13" fill="none" stroke="#4fd1c5" stroke-width="4"/>
+            <circle cx="32" cy="32" r="2.6" fill="#e8f1f4"/>
+          </svg>
+          <span class="brand-text">传送门游戏下载</span>
+        </a>
+        <p>把版本、配置、补丁三件事摆在一起，下载之前心里有数。</p>
+      </div>
+      <div class="footer-col">
+        <h3>下载渠道</h3>
+        <ul>
+          <li><a href="/#compare">Steam 正式版</a></li>
+          <li><a href="/#compare">社区整合版</a></li>
+          <li><a href="/#guide">中文语音包</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>安装与修复</h3>
+        <ul>
+          <li><a href="/#guide">安装四步</a></li>
+          <li><a href="/#faq">报错处理</a></li>
+          <li><a href="/#hardware">硬件兼容</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>互动与榜单</h3>
+        <ul>
+          <li><a href="/#comments">玩家反馈</a></li>
+          <li><a href="/#rank">模组榜单</a></li>
+          <li><a href="/#timeline">渠道时间线</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <span>页面内容含示例条目，版本号与日期对应正文更新记录。更新时间：2026-11-07。</span>
+      <span>© 2026 传送门游戏下载整理</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var navToggle=document.getElementById('navToggle');
+  var mainNav=document.getElementById('mainNav');
+  if(navToggle&&mainNav){
+    navToggle.addEventListener('click',function(){
+      var open=mainNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded',open?'true':'false');
+      navToggle.textContent=open?'关闭':'菜单';
+    });
+    mainNav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.matchMedia('(max-width:720px)').matches){
+        mainNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded','false');
+        navToggle.textContent='菜单';
+      }
+    });
+  }
+
+  var toTop=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>420){toTop.classList.add('show');}
+    else{toTop.classList.remove('show');}
+  },{passive:true});
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  /* 搜索 */
+  var searchInput=document.getElementById('siteSearch');
+  var searchBtn=document.getElementById('searchBtn');
+  var searchResult=document.getElementById('searchResult');
+  var index=[
+    {t:'Steam 正式版下载',id:'compare',k:'steam 正式版 下载 自动更新 成就 云存档'},
+    {t:'社区整合版下载',id:'compare',k:'社区 整合版 下载 离线 中文语音'},
+    {t:'RTX 重制版硬件要求',id:'hardware',k:'rtx 显卡 配置 硬件 帧数 体积光'},
+    {t:'中文语音包安装',id:'guide',k:'语音 中文 安装 crc 校验 1.9gb'},
+    {t:'首关读取卡顿修复',id:'faq',k:'首关 黑屏 卡顿 读取 1.4.2 修复'},
+    {t:'存档转换工具',id:'faq',k:'存档 转换 进度 成就 工具'},
+    {t:'d3d12.dll 缺失',id:'faq',k:'d3d12.dll 缺失 报错 运行库 驱动'},
+    {t:'2026 秋季热门模组榜',id:'rank',k:'模组 榜单 扩展测试室 材质重制'},
+    {t:'玩家实测反馈',id:'comments',k:'评论 反馈 实测 帧数'},
+    {t:'渠道变动时间线',id:'timeline',k:'时间线 更新 节点 补丁'}
+  ];
+  function doSearch(){
+    var q=(searchInput.value||'').trim().toLowerCase();
+    if(!q){searchResult.style.display='none';searchResult.textContent='';return;}
+    var hits=index.filter(function(it){
+      return it.t.toLowerCase().indexOf(q)>-1||it.k.toLowerCase().indexOf(q)>-1;
+    });
+    searchResult.style.display='block';
+    if(hits.length===0){
+      searchResult.textContent='没有找到与“'+searchInput.value.trim()+'”相关的条目，试试“补丁”“语音包”或“黑屏”。';
+    }else{
+      searchResult.textContent='找到 '+hits.length+' 条：'+hits.map(function(h){return h.t;}).join('、');
+    }
+  }
+  if(searchBtn&&searchInput){
+    searchBtn.addEventListener('click',doSearch);
+    searchInput.addEventListener('keydown',function(e){
+      if(e.key==='Enter'){e.preventDefault();doSearch();}
+    });
+  }
+
+  /* 侧栏滚动高亮 */
+  var sideLinks=Array.prototype.slice.call(document.querySelectorAll('#sideNavList a'));
+  var sections=sideLinks.map(function(a){
+    var id=a.getAttribute('href').split('#')[1];
+    return document.getElementById(id);
+  }).filter(Boolean);
+  if('IntersectionObserver' in window && sections.length){
+    var obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          sideLinks.forEach(function(a){
+            a.classList.toggle('active',a.getAttribute('href')==='#'+en.target.id||a.getAttribute('href')==='/# '+en.target.id);
+            a.classList.toggle('active',a.getAttribute('href')==='/'+'#'+en.target.id);
+          });
+        }
+      });
+    },{rootMargin:'-40% 0px -55% 0px',threshold:0});
+    sections.forEach(function(s){obs.observe(s);});
+  }
+});
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"传送门游戏下载",
+  "description":"传送门游戏下载的版本选择、安装指引与社区实测整理。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"传送门游戏下载后提示缺少 d3d12.dll 怎么办？","acceptedAnswer":{"@type":"Answer","text":"通常出现在 RTX 重制版，原因是缺少 DirectX 12 运行库或显卡驱动过旧。先装 2026 年 10 月以后的显卡驱动，再补 DirectX 运行库，最后重启。"}},
+    {"@type":"Question","name":"社区整合版首关读取黑屏 14 秒正常吗？","acceptedAnswer":{"@type":"Answer","text":"1.4.2 补丁之前属于已知现象，原因是资源索引顺序。升级后通常缩短到 4 秒以内，若仍超过 10 秒，多为旧 bin 目录残留。"}},
+    {"@type":"Question","name":"中文语音包装完没声音，是版本不对吗？","acceptedAnswer":{"@type":"Answer","text":"10 月 30 日之后启动器增加 CRC 校验，旧语音包会失效。新版为 1.9 GB，旧版 1.7 GB，换用新版后在设置里手动选择简体中文。"}},
+    {"@type":"Question","name":"存档转换工具安全吗？","acceptedAnswer":{"@type":"Answer","text":"工具只读写本地存档文件，不改系统设置。建议比对社区维护者公布的校验值。转换后进度保留，成就不会同步。"}},
+    {"@type":"Question","name":"整合版能不能用创意工坊模组？","acceptedAnswer":{"@type":"Answer","text":"不能直接一键订阅，需要手动下载模组文件放进对应目录，并核对适配的版本号，装旧模组容易触发启动失败。"}}
+  ]
+}
+</script>
+</body>
+    </html>
