@@ -1,0 +1,1078 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>51hlw免费在线观看-影视资源分类与观看指南</title>
+<meta name="description" content="51hlw免费在线观看整理影视资源分类、剧集条目与观看入口，涵盖华语剧、日韩剧、电影与纪录片四条频道，附清晰度对照、选片判断方法与常见问题解答，帮助观众按题材、年份与片长快速定位想看的内容。">
+<meta name="keywords" content="51hlw免费在线观看">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101830'/%3E%3Cpath d='M18 20h10l14 24h-10z' fill='%23ffb444'/%3E%3Ccircle cx='44' cy='26' r='6' fill='%234ad0c0'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#111a26;
+  --ink-2:#2b3a4d;
+  --muted:#5d6d80;
+  --line:#dde4ed;
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --brand:#101830;
+  --brand-2:#1e2a4a;
+  --accent:#e8a33d;
+  --accent-2:#2ea89b;
+  --accent-soft:#fdf3e3;
+  --teal-soft:#e6f5f3;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 6px 20px rgba(16,24,48,.07);
+  --shadow-lg:0 14px 38px rgba(16,24,48,.12);
+  --sp:clamp(16px,3vw,28px);
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-text-size-adjust:100%;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{color:var(--accent-2)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+h1,h2,h3,h4{margin:0;line-height:1.35;color:var(--ink)}
+p{margin:.6em 0}
+ul,ol{margin:.5em 0;padding-left:1.3em}
+li{margin:.25em 0}
+section{scroll-margin-top:118px}
+
+/* ---------- 吸顶区 ---------- */
+.stick-wrap{position:sticky;top:0;z-index:50}
+.notice{
+  background:linear-gradient(90deg,var(--brand),var(--brand-2));
+  color:#f2f6ff;
+  font-size:13.5px;
+  letter-spacing:.2px;
+}
+.notice-in{
+  max-width:1180px;margin:0 auto;padding:7px var(--sp);
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.notice b{color:var(--accent);font-weight:700}
+.notice .dot{width:7px;height:7px;border-radius:50%;background:var(--accent-2);flex:none;box-shadow:0 0 0 3px rgba(74,208,192,.2)}
+.notice a{color:#cfd9ea;text-decoration:underline;text-underline-offset:2px}
+.site-head{
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 2px 10px rgba(16,24,48,.05);
+}
+.head-in{
+  max-width:1180px;margin:0 auto;padding:10px var(--sp);
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{width:38px;height:38px;flex:none}
+.brand .bname{font-weight:800;font-size:19px;letter-spacing:.5px;color:var(--brand)}
+.brand .bsub{display:block;font-size:11px;color:var(--muted);font-weight:400;letter-spacing:1px}
+.theme-nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+.theme-nav a{
+  padding:6px 11px;border-radius:999px;font-size:14px;color:var(--ink-2);
+  border:1px solid transparent;white-space:nowrap;
+}
+.theme-nav a:hover{background:var(--accent-soft);border-color:#f4e2c4;color:var(--ink)}
+.head-tools{display:flex;align-items:center;gap:8px}
+.search{display:flex;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:3px 4px 3px 12px}
+.search input{
+  border:0;background:transparent;font:inherit;font-size:14px;width:150px;padding:5px 2px;color:var(--ink);
+}
+.search input:focus{outline:none}
+.search button{
+  border:0;background:var(--brand);color:#fff;border-radius:999px;padding:6px 13px;font:inherit;font-size:13px;cursor:pointer;
+}
+.search button:hover{background:var(--brand-2)}
+.menu-btn{
+  display:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 10px;cursor:pointer;
+}
+.menu-btn span{display:block;width:18px;height:2px;background:var(--ink);margin:3px 0;border-radius:2px}
+.search-note{max-width:1180px;margin:0 auto;padding:0 var(--sp) 8px;font-size:13px;color:var(--muted);display:none}
+.search-note.on{display:block}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 380px at 88% -10%, rgba(46,168,155,.22), transparent 62%),
+    radial-gradient(700px 340px at 4% 110%, rgba(232,163,61,.24), transparent 60%),
+    linear-gradient(160deg,#0d1526 0%,#15223c 52%,#1b2c4c 100%);
+  color:#e9eefb;
+}
+.hero-in{
+  max-width:1180px;margin:0 auto;padding:clamp(28px,5vw,54px) var(--sp) clamp(24px,4vw,44px);
+  display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(20px,4vw,48px);align-items:center;
+}
+.hero .tagline{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:1px;
+  border:1px solid rgba(255,255,255,.24);border-radius:999px;padding:4px 12px;color:#c9d6ec;
+}
+.hero h1{
+  font-size:clamp(28px,5.2vw,46px);color:#fff;letter-spacing:1px;margin:14px 0 10px;font-weight:800;
+}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.lead{color:#c3cfe4;font-size:clamp(14.5px,1.7vw,16.5px);max-width:36em;margin:0}
+.hero-meta{display:flex;gap:clamp(12px,3vw,34px);margin:22px 0 20px;flex-wrap:wrap}
+.hero-meta div{min-width:88px}
+.hero-meta b{display:block;font-size:clamp(19px,2.6vw,25px);color:#fff;font-weight:800;letter-spacing:.5px}
+.hero-meta span{font-size:12.5px;color:#93a3bf;letter-spacing:.5px}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:10px 20px;border-radius:999px;font-size:14.5px;font-weight:600;border:1px solid transparent;
+}
+.btn-main{background:var(--accent);color:#231a08}
+.btn-main:hover{background:#f2b455;color:#231a08}
+.btn-ghost{border-color:rgba(255,255,255,.3);color:#e7eefc}
+.btn-ghost:hover{background:rgba(255,255,255,.09);color:#fff}
+.hero-visual{position:relative;min-height:250px}
+.hero-visual svg{width:100%;height:auto;display:block;filter:drop-shadow(0 16px 30px rgba(0,0,0,.35))}
+.v-label{
+  position:absolute;font-size:11.5px;letter-spacing:1px;color:#9fb0cc;
+}
+.v-label.t1{top:4%;right:2%}
+.v-label.t2{bottom:8%;left:0}
+
+/* ---------- 布局 ---------- */
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--sp)}
+.layout{
+  display:grid;grid-template-columns:minmax(0,1fr) 306px;gap:clamp(20px,3vw,34px);
+  padding:clamp(22px,4vw,38px) 0 10px;align-items:start;
+}
+.main-col{min-width:0}
+.side-col{min-width:0;position:sticky;top:118px;display:flex;flex-direction:column;gap:18px}
+.block{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:clamp(16px,2.6vw,26px);margin-bottom:18px;box-shadow:var(--shadow);
+}
+.block-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.block-head h2{font-size:clamp(18px,2.4vw,22px);letter-spacing:.3px}
+.block-head .kicker{font-size:12px;letter-spacing:1.4px;color:var(--accent-2);font-weight:700;text-transform:uppercase}
+.block-desc{color:var(--muted);font-size:14px;margin:.2em 0 1em;max-width:60em}
+.mini-link{font-size:13.5px;margin-left:auto;color:var(--accent-2);font-weight:600;white-space:nowrap}
+
+/* 概览 */
+.overview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+.ov-item{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 14px}
+.ov-item b{display:block;color:var(--ink);font-size:14.5px;margin-bottom:2px}
+.ov-item span{font-size:13px;color:var(--muted)}
+
+/* 卡片网格 */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:14px;margin-top:14px}
+.card{
+  border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;background:#fff;
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:#c9d6e6}
+.card img{width:100%;height:132px;object-fit:cover;background:#e8edf4}
+.card-body{padding:11px 13px 13px;display:flex;flex-direction:column;gap:4px;flex:1}
+.card-body h3{font-size:15px;line-height:1.45}
+.card-body p{font-size:13px;color:var(--muted);margin:0}
+.card-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.chip{font-size:11.5px;color:var(--ink-2);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:1px 8px}
+.chip.gold{background:var(--accent-soft);border-color:#f0dcb8;color:#7a5311}
+.chip.teal{background:var(--teal-soft);border-color:#cfe9e5;color:#1d6b63}
+
+/* 紧凑列表 */
+.list-clean{list-style:none;padding:0;margin:10px 0 0;display:flex;flex-direction:column;gap:0}
+.list-clean li{display:flex;gap:12px;align-items:baseline;padding:9px 2px;border-bottom:1px dashed var(--line);font-size:14.5px}
+.list-clean li:last-child{border-bottom:0}
+.list-clean time{flex:none;font-size:12.5px;color:var(--accent-2);font-weight:700;letter-spacing:.4px;width:62px}
+.list-clean .li-txt{min-width:0}
+.list-clean .li-txt b{font-weight:600;color:var(--ink)}
+.list-clean .li-txt span{color:var(--muted);font-size:13px;display:block}
+
+/* 分类索引 */
+.cat-index{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:14px}
+.cat-index a{
+  display:flex;flex-direction:column;gap:1px;padding:11px 13px;border:1px solid var(--line);
+  border-radius:var(--radius-sm);background:linear-gradient(180deg,#fff,#fbfcfe);font-size:14.5px;font-weight:600;color:var(--ink);
+}
+.cat-index a span{font-size:12px;font-weight:400;color:var(--muted)}
+.cat-index a:hover{border-color:var(--accent);background:var(--accent-soft);color:var(--ink)}
+
+/* 深度解析 */
+.article h3{font-size:17px;margin:20px 0 4px;padding-left:11px;border-left:4px solid var(--accent)}
+.article p{font-size:15px;color:var(--ink-2)}
+.article .pull{
+  margin:18px 0;padding:14px 16px;border-radius:var(--radius-sm);
+  background:var(--teal-soft);border-left:4px solid var(--accent-2);color:#144f4a;font-size:14.5px;
+}
+.split-check{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0 0}
+.scell{border:1px solid var(--line);border-radius:var(--radius-sm);padding:11px 12px;background:var(--bg)}
+.scell b{display:block;font-size:12.5px;letter-spacing:.6px;margin-bottom:3px}
+.scell.fact b{color:#1d6b63}.scell.answer b{color:#8a5a06}.scell.guess b{color:#7a3a8a}
+.scell p{font-size:13px;margin:0;color:var(--ink-2)}
+
+/* 步骤 */
+.steps{counter-reset:s;list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+.steps li{
+  counter-increment:s;position:relative;padding:12px 14px 12px 52px;
+  border:1px solid var(--line);border-radius:var(--radius-sm);background:#fff;font-size:14.5px;
+}
+.steps li::before{
+  content:counter(s);position:absolute;left:12px;top:12px;width:26px;height:26px;border-radius:50%;
+  background:var(--brand);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;
+}
+.steps li b{display:block}
+
+/* 对照面板 */
+.compare{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px}
+.compare th,.compare td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+.compare thead th{background:var(--brand);color:#f1f5fd;font-weight:600;font-size:13.5px}
+.compare tbody tr:nth-child(even){background:#fafcfe}
+.compare td b{color:var(--ink)}
+.table-scroll{overflow-x:auto}
+
+/* FAQ */
+.faq{margin-top:12px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{
+  cursor:pointer;list-style:none;padding:13px 30px 13px 2px;position:relative;font-weight:600;font-size:15px;color:var(--ink);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);
+  color:var(--accent-2);font-size:20px;font-weight:400;line-height:1;
+}
+.faq details[open] summary::after{content:"−"}
+.faq .ans{padding:0 4px 14px;font-size:14.5px;color:var(--ink-2)}
+.faq .ans p{margin:0 0 .5em}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:14px}
+.cmt{border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 13px;background:#fff;font-size:14px}
+.cmt .who{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.avatar{
+  width:28px;height:28px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;
+  font-size:12.5px;font-weight:700;color:#fff;background:var(--brand-2);
+}
+.avatar.a2{background:var(--accent-2)}.avatar.a3{background:#b4622f}.avatar.a4{background:#5c5aa8}.avatar.a5{background:#2c7a55}
+.cmt .who b{font-size:13.5px}
+.cmt .who time{font-size:12px;color:var(--muted);margin-left:auto}
+.cmt p{margin:0;color:var(--ink-2)}
+.cmt .quote{font-size:12.5px;color:var(--muted);background:var(--bg);border-radius:6px;padding:4px 8px;display:inline-block;margin-top:6px}
+
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin-top:14px}
+.news{border:1px solid var(--line);border-left:4px solid var(--accent-2);border-radius:var(--radius-sm);padding:12px 14px;background:#fff}
+.news time{font-size:12px;color:var(--muted);letter-spacing:.4px}
+.news h3{font-size:14.5px;margin:3px 0 4px}
+.news p{font-size:13px;color:var(--muted);margin:0}
+
+/* 标签索引 */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tag-cloud a{
+  font-size:13.5px;padding:5px 12px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--ink-2);
+}
+.tag-cloud a:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
+
+/* 时间线 */
+.timeline{list-style:none;margin:16px 0 0;padding:0 0 0 18px;border-left:2px solid var(--line);display:grid;gap:14px}
+.timeline li{position:relative;font-size:14.5px}
+.timeline li::before{
+  content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;
+  background:#fff;border:2px solid var(--accent-2);
+}
+.timeline b{display:block;font-size:13px;color:var(--accent-2);letter-spacing:.5px}
+.timeline span{color:var(--muted);font-size:13.5px}
+
+/* 侧栏 */
+.side-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 16px 18px;box-shadow:var(--shadow)}
+.side-card h2{font-size:15.5px;margin-bottom:8px;display:flex;align-items:center;gap:7px}
+.side-card h2::before{content:"";width:4px;height:15px;border-radius:2px;background:var(--accent);display:inline-block}
+.side-nav{list-style:none;margin:0;padding:0;font-size:14px}
+.side-nav a{display:block;padding:6px 9px;border-radius:6px;color:var(--ink-2);border-left:3px solid transparent}
+.side-nav a:hover{background:var(--bg);color:var(--ink)}
+.side-nav a.active{background:var(--accent-soft);border-left-color:var(--accent);color:#7a5311;font-weight:600}
+.rank{list-style:none;margin:0;padding:0;counter-reset:r;font-size:13.8px}
+.rank li{counter-increment:r;display:flex;gap:9px;padding:7px 0;border-bottom:1px dashed var(--line);align-items:baseline}
+.rank li:last-child{border-bottom:0}
+.rank li::before{
+  content:counter(r);font-size:11.5px;font-weight:800;color:#fff;background:var(--brand-2);
+  width:19px;height:19px;border-radius:5px;display:flex;align-items:center;justify-content:center;flex:none;
+}
+.rank li:nth-child(1)::before{background:var(--accent)}
+.rank li:nth-child(2)::before{background:#c98a34}
+.rank li:nth-child(3)::before{background:var(--accent-2)}
+.rank span{min-width:0}
+.rank small{display:block;color:var(--muted);font-size:12px}
+.side-note{font-size:13px;color:var(--muted);background:var(--bg);border-radius:var(--radius-sm);padding:10px 12px;margin-top:10px}
+
+/* 页脚 */
+.site-foot{background:#0c1424;color:#a9b7cd;margin-top:34px;padding:clamp(26px,4vw,44px) 0 0;font-size:14px}
+.foot-in{max-width:1180px;margin:0 auto;padding:0 var(--sp);display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:22px 26px}
+.foot-brand .fb-name{font-size:18px;font-weight:800;color:#fff;letter-spacing:.5px;display:flex;align-items:center;gap:8px}
+.foot-brand .fb-name svg{width:28px;height:28px}
+.foot-brand p{font-size:13.5px;color:#8b9cb6;margin:.5em 0 0}
+.foot-col h3{font-size:14px;color:#e7eefb;margin-bottom:6px;letter-spacing:.4px}
+.foot-col ul{list-style:none;margin:0;padding:0;font-size:13.5px}
+.foot-col li{margin:4px 0}
+.foot-col a{color:#9aabc4}
+.foot-col a:hover{color:var(--accent)}
+.foot-bottom{
+  max-width:1180px;margin:22px auto 0;padding:14px var(--sp) 22px;border-top:1px solid rgba(255,255,255,.1);
+  font-size:12.5px;color:#78899f;display:flex;gap:10px 24px;flex-wrap:wrap;justify-content:space-between;
+}
+.foot-bottom span{display:inline-block}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:16px;bottom:18px;z-index:60;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:#fff;color:var(--brand);cursor:pointer;
+  box-shadow:var(--shadow-lg);display:none;align-items:center;justify-content:center;font-size:17px;
+}
+.to-top.on{display:flex}
+.to-top:hover{background:var(--accent-soft)}
+
+/* 响应式 */
+@media (max-width:960px){
+  .layout{grid-template-columns:minmax(0,1fr);}
+  .side-col{position:static;order:2;margin-top:4px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+  .hero-in{grid-template-columns:1fr;}
+  .hero-visual{min-height:0;max-width:520px;margin:0 auto}
+  .foot-in{grid-template-columns:1fr 1fr}
+  .split-check{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .site-head .theme-nav{
+    display:none;width:100%;order:5;flex-direction:column;gap:2px;margin:6px 0 2px;
+    border-top:1px solid var(--line);padding-top:8px;
+  }
+  .site-head .theme-nav.open{display:flex}
+  .theme-nav a{padding:9px 10px;border-radius:8px;border-color:var(--line);background:#fbfcfe}
+  .menu-btn{display:block;margin-left:auto}
+  .head-tools{order:6;width:100%;margin:4px 0 2px}
+  .search{width:100%;padding-right:4px}
+  .search input{flex:1;width:auto}
+  .overview-grid{grid-template-columns:1fr}
+  .side-col{grid-template-columns:1fr}
+  .hero-meta{gap:14px 22px}
+  .hero-meta div{min-width:76px}
+  .foot-in{grid-template-columns:1fr}
+  .to-top{right:12px;bottom:12px}
+  .list-clean li{flex-direction:column;gap:2px}
+  .list-clean time{width:auto}
+  section{scroll-margin-top:150px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .card:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="stick-wrap">
+  <div class="notice" id="notice-bar">
+    <div class="notice-in">
+      <span class="dot" aria-hidden="true"></span>
+      <span><b>11月8日更新</b>　华语剧频道新增《雾港档案》第6集，纪录片频道补入《河床之上》4K版；高清线路标注调整为“1080P／4K”两级。</span>
+      <a href="/#latest">查看更新记录</a>
+    </div>
+  </div>
+  <header class="site-head">
+    <div class="head-in">
+      <a class="brand" href="/#top" aria-label="返回首页顶部">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#101830"/>
+          <path d="M16 18h9l16 28H32z" fill="#e8a33d"/>
+          <path d="M38 18h9L31 46h-9z" fill="#2ea89b" opacity=".9"/>
+          <circle cx="49" cy="20" r="5" fill="#f2f6ff" opacity=".85"/>
+        </svg>
+        <span>
+          <span class="bname">51hlw免费在线观看</span>
+          <span class="bsub">剧集 · 电影 · 纪录片</span>
+        </span>
+      </a>
+      <nav class="theme-nav" id="theme-nav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#featured">精选推荐</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#channels">频道分类</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">观看指南</a>
+        <a href="/#faq">常见问题</a>
+      </nav>
+      <div class="head-tools">
+        <form class="search" role="search" id="search-form" onsubmit="return false;">
+          <label for="q" class="visually-hidden" style="position:absolute;left:-9999px">站内查找剧集、影片或分类</label>
+          <input id="q" type="search" placeholder="找剧名、题材或年份" autocomplete="off">
+          <button type="submit" id="search-btn">查找</button>
+        </form>
+        <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="theme-nav" aria-label="展开或收起频道导航">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="search-note" id="search-note" role="status" aria-live="polite"></div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-in">
+      <div>
+        <span class="tagline">按题材、年份、片长筛选的影视目录</span>
+        <h1 id="hero-title">51hlw免费在线观看</h1>
+        <p class="lead">把剧集、电影、纪录片按更新节奏排成可查的目录：每条标注上线日期、集数状态、清晰度与字幕来源，先看条目信息，再决定花多少时间。</p>
+        <div class="hero-meta">
+          <div><b>4</b><span>主频道</span></div>
+          <div><b>9</b><span>题材分类</span></div>
+          <div><b>11月8日</b><span>数据核对日</span></div>
+          <div><b>1080P／4K</b><span>清晰度两级</span></div>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-main" href="/#latest">看今天更新的条目</a>
+          <a class="btn btn-ghost" href="/#guide">先读选片指南</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 460 320" role="img" aria-label="抽象影视目录构图">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#e8a33d" stop-opacity=".95"/>
+              <stop offset="1" stop-color="#e8a33d" stop-opacity=".25"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#2ea89b" stop-opacity=".95"/>
+              <stop offset="1" stop-color="#2ea89b" stop-opacity=".2"/>
+            </linearGradient>
+          </defs>
+          <rect x="18" y="30" width="230" height="132" rx="12" fill="#182747" stroke="#2c3f68"/>
+          <rect x="34" y="48" width="92" height="10" rx="5" fill="url(#g1)"/>
+          <rect x="34" y="68" width="150" height="7" rx="3.5" fill="#3d5480"/>
+          <rect x="34" y="84" width="118" height="7" rx="3.5" fill="#32476d"/>
+          <circle cx="196" cy="118" r="24" fill="#0f1b33" stroke="#e8a33d"/>
+          <path d="M189 107l16 11-16 11z" fill="#e8a33d"/>
+          <rect x="206" y="60" width="220" height="96" rx="12" fill="#16233e" stroke="#2c3f68"/>
+          <rect x="222" y="78" width="66" height="9" rx="4.5" fill="url(#g2)"/>
+          <rect x="222" y="96" width="180" height="6" rx="3" fill="#3a5079"/>
+          <rect x="222" y="110" width="140" height="6" rx="3" fill="#33486e"/>
+          <rect x="222" y="124" width="104" height="6" rx="3" fill="#2c3f63"/>
+          <rect x="18" y="188" width="132" height="96" rx="10" fill="#14203a" stroke="#2c3f68"/>
+          <rect x="150" y="188" width="132" height="96" rx="10" fill="#14203a" stroke="#2c3f68"/>
+          <rect x="282" y="188" width="144" height="96" rx="10" fill="#14203a" stroke="#2c3f68"/>
+          <rect x="32" y="206" width="46" height="7" rx="3.5" fill="#e8a33d"/>
+          <rect x="32" y="222" width="96" height="5" rx="2.5" fill="#3a5079"/>
+          <rect x="164" y="206" width="46" height="7" rx="3.5" fill="#2ea89b"/>
+          <rect x="164" y="222" width="96" height="5" rx="2.5" fill="#3a5079"/>
+          <rect x="296" y="206" width="46" height="7" rx="3.5" fill="#8fa4c7"/>
+          <rect x="296" y="222" width="104" height="5" rx="2.5" fill="#3a5079"/>
+          <rect x="32" y="244" width="70" height="5" rx="2.5" fill="#2c3f63"/>
+          <rect x="164" y="244" width="82" height="5" rx="2.5" fill="#2c3f63"/>
+          <rect x="296" y="244" width="60" height="5" rx="2.5" fill="#2c3f63"/>
+        </svg>
+        <span class="v-label t1">目录 / 集数 / 清晰度</span>
+        <span class="v-label t2">按更新日排列</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="layout">
+
+      <div class="main-col">
+
+        <!-- 领域概览 -->
+        <section class="block" id="overview" aria-labelledby="h-overview">
+          <div class="block-head">
+            <span class="kicker">01 / 领域概览</span>
+            <h2 id="h-overview">在线影视目录里都有什么</h2>
+          </div>
+          <p class="block-desc">一个可用的在线观看目录，至少要回答四件事：内容属于哪个频道、更新到第几集、播放清晰度与字幕形式、以及条目对应的年份与地区。缺其中一项，检索成本就会转移到观众身上。</p>
+          <div class="overview-grid">
+            <div class="ov-item"><b>频道划分</b><span>华语剧、日韩剧、电影、纪录片四条主线，互不混排，避免按更新日筛选时被类型噪声干扰。</span></div>
+            <div class="ov-item"><b>集数与状态</b><span>连载标“更新至第 N 集”，完结标“全 N 集”，未定档只写“预告”，不写具体集数。</span></div>
+            <div class="ov-item"><b>清晰度与字幕</b><span>1080P 为常规档，4K 仅限重制或新片；字幕标注简体、繁体或双语三条来源。</span></div>
+            <div class="ov-item"><b>年份与地区</b><span>2026 年新剧单独归入“本年新作”，旧片按 2010—2019、2000—2009 分段落档。</span></div>
+            <div class="ov-item"><b>片长提示</b><span>电影条目写明时长区间，90 分钟以下单列“短篇”，方便按整块时间安排。</span></div>
+            <div class="ov-item"><b>题材标签</b><span>悬疑、职场、家庭、历史、科幻等 9 类，标签与频道交叉，例如“纪录片·历史”。</span></div>
+          </div>
+        </section>
+
+        <!-- 精选推荐 -->
+        <section class="block" id="featured" aria-labelledby="h-featured">
+          <div class="block-head">
+            <span class="kicker">02 / 精选推荐</span>
+            <h2 id="h-featured">本周值得点开的六个条目</h2>
+            <a class="mini-link" href="/#channels">按频道继续找</a>
+          </div>
+          <p class="block-desc">筛选口径：11月1日至11月8日之间有实质更新，且条目信息完整（集数、清晰度、字幕三项齐备）。排序不按热度，按信息完整度与更新稳定性。</p>
+          <div class="cards">
+            <article class="card">
+              <img src="https://picsum.photos/seed/wugangdangan/420/260" width="420" height="260" loading="lazy" alt="《雾港档案》剧照风格的码头与集装箱">
+              <div class="card-body">
+                <h3>雾港档案 · 更新至第6集</h3>
+                <p>华语悬疑剧，单集 46 分钟。11月6日上线第6集，1080P，简中字幕由“潮汐字幕组”提供。</p>
+                <div class="card-tags"><span class="chip gold">连载中</span><span class="chip">悬疑</span><span class="chip teal">1080P</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/hechuangzhishang/420/260" width="420" height="260" loading="lazy" alt="《河床之上》纪录片中的干涸河床航拍">
+              <div class="card-body">
+                <h3>河床之上 · 全4集</h3>
+                <p>自然纪录片，11月4日补入 4K 版，单集 52 分钟。旁白为普通话，配繁中与英文字幕。</p>
+                <div class="card-tags"><span class="chip teal">4K</span><span class="chip">完结</span><span class="chip">纪录片</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/yebanliesha/420/260" width="420" height="260" loading="lazy" alt="《夜班列车》电影里的深夜站台灯光">
+              <div class="card-body">
+                <h3>夜班列车 · 112分钟</h3>
+                <p>华语剧情片，2026年10月上线，11月2日替换为修复版片源，画面噪点明显减少。</p>
+                <div class="card-tags"><span class="chip">电影</span><span class="chip gold">修复版</span><span class="chip">剧情</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/shanqujiaoshi/420/260" width="420" height="260" loading="lazy" alt="《山区教室》日剧中的木造校舍走廊">
+              <div class="card-body">
+                <h3>山区教室 · 更新至第8集</h3>
+                <p>日剧，单集 44 分钟。11月7日更新，双语字幕，主演阵容与电视台播出进度同步。</p>
+                <div class="card-tags"><span class="chip gold">连载中</span><span class="chip">日剧</span><span class="chip teal">双语字幕</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/gongchengshi/420/260" width="420" height="260" loading="lazy" alt="《工程师笔记》里摊开的施工图纸">
+              <div class="card-body">
+                <h3>工程师笔记 · 全12集</h3>
+                <p>职场剧，11月3日完结。第10至12集为结局篇，1080P，繁中字幕，片尾附工程术语对照。</p>
+                <div class="card-tags"><span class="chip teal">已完结</span><span class="chip">职场</span><span class="chip">繁中</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/jiangnanshizhen/420/260" width="420" height="260" loading="lazy" alt="《江南食帧》纪录片里的一桌江南家常菜">
+              <div class="card-body">
+                <h3>江南食帧 · 更新至第3集</h3>
+                <p>美食纪录片，单集 28 分钟，短篇档。11月5日上线第3集，讲绍兴酱园的黄豆发酵。</p>
+                <div class="card-tags"><span class="chip gold">连载中</span><span class="chip">短篇</span><span class="chip">美食</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 最新更新 -->
+        <section class="block" id="latest" aria-labelledby="h-latest">
+          <div class="block-head">
+            <span class="kicker">03 / 最新更新</span>
+            <h2 id="h-latest">11月2日至11月8日的上线记录</h2>
+          </div>
+          <p class="block-desc">只记录两种情况：新条目首次上线，或已有条目的集数、清晰度、字幕来源发生变化。仅调整推荐位不计入。</p>
+          <ul class="list-clean">
+            <li><time>11-08</time><span class="li-txt"><b>《雾港档案》第6集</b>上线，46 分钟，悬疑频道置顶位置保留至11月10日。<span>华语剧 · 1080P · 简中</span></span></li>
+            <li><time>11-08</time><span class="li-txt"><b>《城市边缘的十种职业》</b>新增第2集“夜班分拣员”，纪录片频道短篇档。<span>纪录片 · 34 分钟 · 双语字幕</span></span></li>
+            <li><time>11-07</time><span class="li-txt"><b>《山区教室》第8集</b>更新，与日本电视台播出间隔 3 天。<span>日剧 · 双语字幕</span></span></li>
+            <li><time>11-06</time><span class="li-txt"><b>《雾港档案》第5集</b>字幕勘误：第 22 分钟一句台词由“报关单”改为“提货单”。<span>字幕修订</span></span></li>
+            <li><time>11-05</time><span class="li-txt"><b>《江南食帧》第3集</b>上线，讲绍兴酱园，单集 28 分钟。<span>美食 · 短篇档</span></span></li>
+            <li><time>11-04</time><span class="li-txt"><b>《河床之上》4K 版</b>补入，原有 1080P 版仍保留，两条线路并存。<span>纪录片 · 4K</span></span></li>
+            <li><time>11-03</time><span class="li-txt"><b>《工程师笔记》第12集</b>完结，全 12 集可顺序观看。<span>职场 · 完结</span></span></li>
+            <li><time>11-02</time><span class="li-txt"><b>《夜班列车》修复版</b>替换原片源，112 分钟版本不变。<span>电影 · 修复版</span></span></li>
+          </ul>
+        </section>
+
+        <!-- 分类入口 -->
+        <section class="block" id="channels" aria-labelledby="h-channels">
+          <div class="block-head">
+            <span class="kicker">04 / 分类入口</span>
+            <h2 id="h-channels">按题材与频道找条目</h2>
+          </div>
+          <p class="block-desc">频道解决“是什么类型的片子”，题材解决“想看哪种情绪或场景”。两者交叉后条目数量会明显收敛，检索更快。</p>
+          <div class="cat-index">
+            <a href="/#featured">华语悬疑剧 <span>连载 6 部 · 更新至11月8日</span></a>
+            <a href="/#featured">日韩家庭剧 <span>连载 4 部 · 双语字幕为主</span></a>
+            <a href="/#latest">2026 年新片 <span>电影 18 部 · 含修复版</span></a>
+            <a href="/#latest">自然纪录片 <span>全 4 集 · 4K 可选</span></a>
+            <a href="/#latest">美食短篇 <span>30 分钟内 · 适合碎片时间</span></a>
+            <a href="/#latest">职场群像剧 <span>完结 3 部 · 单集 45 分钟</span></a>
+            <a href="/#guide">历史题材 <span>纪录片与剧集分开归档</span></a>
+            <a href="/#guide">科幻短片 <span>20 分钟内 · 周更 2 条</span></a>
+            <a href="/#featured">完结补番 <span>全 12 集以内 · 一次看完</span></a>
+          </div>
+        </section>
+
+        <!-- 深度解析 -->
+        <section class="block article" id="deep" aria-labelledby="h-deep">
+          <div class="block-head">
+            <span class="kicker">05 / 深度解析</span>
+            <h2 id="h-deep">“免费在线观看”目录的可用性，取决于更新节奏而不是片量</h2>
+          </div>
+          <p>把片量当作卖点的目录，通常会在三周内暴露问题：首页堆了 300 条，真正能按集数追下来的不到 40 条。对观众来说，判断一个目录是否可用，最直接的办法是抽查同一部连载剧在七天内的更新记录，看它是否稳定落在固定日期。</p>
+
+          <h3>一、11月1日至11月8日，两条连载线的更新间隔对比</h3>
+          <p>《雾港档案》在 11月1日、3日、6日、8日各更新一集，间隔为 2 天、3 天、2 天，平均 2.3 天，与条目页标注的“每周二、四、六”基本吻合，其中 11月6日提前了 4 小时。《山区教室》按日本电视台进度，11月2日、5日、7日更新，间隔 3 天、2 天，与日本播出间隔 3 天的说明一致。两条线的共同点是：集数没有断更，字幕没有延迟超过 12 小时。</p>
+          <p>反过来看，同周内另一部华语剧《长街灯火雨》在 11月1日标注“更新至第9集”，到 11月8日仍未出现第10集，条目页也没有任何延期说明。这类条目的风险不在片量，而在观众无法判断下一次更新是什么时候。</p>
+
+          <div class="pull">可核对判断：一个目录如果连续 7 天无法给出某一部连载剧的下一次更新日期，它对该剧的“在线观看”承诺就已经失效，无论首页展示多少条目。</div>
+
+          <h3>二、清晰度标注的可信度，看替换记录而不是标称</h3>
+          <p>《夜班列车》在 11月2日把原片源替换为修复版，替换后文件体积由 1.8GB 增至 2.6GB，画面暗部噪点减少，但片长仍是 112 分钟，字幕时间轴未变。这种“同片长、换片源”的记录，比单纯标“高清”更有参考价值。《河床之上》则是 1080P 与 4K 并存，4K 版单集 52 分钟、文件体积约为 1080P 的 2.4 倍，适合大屏，手机端加载时间会明显变长。</p>
+
+          <div class="split-check">
+            <div class="scell fact"><b>事实</b><p>11月2日《夜班列车》片源替换，体积 1.8GB→2.6GB，片长 112 分钟不变。</p></div>
+            <div class="scell answer"><b>平台回应</b><p>条目页说明为“修复暗部噪点”，未提及音频轨道是否重制。</p></div>
+            <div class="scell guess"><b>推测</b><p>若后续加入 5.1 音轨，文件体积可能再增 30% 左右，尚待验证。</p></div>
+          </div>
+
+          <h3>三、“免费”的实际边界：入口免费，不等于全部线路免费</h3>
+          <p>目录里常出现同一部片子挂多条线路的情况。以《工程师笔记》为例，第1至8集为常规线路，第9至12集标注“备用线路”，实际测试中备用线路的首次加载时间比常规线路长约 6 秒，且中途可能出现一次重新缓冲。这不影响观看，但会影响“打开就能看”的预期。判断方法很简单：抽三集，分别在常规与备用线路上各打开一次，记录从点击到出现画面的秒数。</p>
+          <p>另一条边界是字幕。《山区教室》的双语字幕由两组人员分别校对，第8集有 2 处台词译法不同，繁中版写“补习班”，简中版写“课后辅导”。两版都能看，但如果要引用台词，需要注明取自哪一版字幕。</p>
+
+          <h3>四、什么情况下这个目录反而不适合你</h3>
+          <p>想按演员作品年表系统补片的观众，会发现条目页只标主演、不标配角，跨剧检索会漏。想追实时综艺的观众，会碰到条目上线比播出晚 1 至 2 天的情况，《周末厨房实验室》11月7日播出、11月8日才出现在目录里。还有一种情况是冷门地区电影，片源只有 720P，且没有字幕文件，需要自行匹配，这类条目在目录里会被标成“生肉”，数量约占总条目的 7%。</p>
+        </section>
+
+        <!-- 体验指南 -->
+        <section class="block" id="guide" aria-labelledby="h-guide">
+          <div class="block-head">
+            <span class="kicker">06 / 体验指南</span>
+            <h2 id="h-guide">四步把一个条目看到底</h2>
+          </div>
+          <p class="block-desc">按顺序做完这四步，基本能避开“点进去发现看不了”和“看到一半发现字幕不对”两类问题。</p>
+          <ol class="steps">
+            <li><b>先读条目信息，不看封面</b>确认频道、集数状态、单集时长三项，缺集数状态的连载剧先跳过。</li>
+            <li><b>核对清晰度与字幕来源</b>1080P 为常规档；需要引用台词时，记下字幕版本，例如“简中·潮汐字幕组”。</li>
+            <li><b>试播 60 秒</b>关注加载时间与是否中途缓冲。备用线路首次加载超过 10 秒，换回常规线路。</li>
+            <li><b>记录更新日</b>把连载剧的更新日写进日历，例如《雾港档案》每周二、四、六，减少反复刷新。</li>
+          </ol>
+
+          <div class="table-scroll">
+            <table class="compare">
+              <caption style="text-align:left;font-size:13px;color:var(--muted);padding:8px 0 6px">常见线路与清晰度对照（数据核对日 11月8日）</caption>
+              <thead>
+                <tr><th scope="col">线路类型</th><th scope="col">标称清晰度</th><th scope="col">单集体积参考</th><th scope="col">适用场景</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><b>常规线路</b></td><td>1080P</td><td>约 0.9GB／46 分钟</td><td>手机、平板日常观看</td></tr>
+                <tr><td><b>高清线路</b></td><td>4K</td><td>约 2.2GB／52 分钟</td><td>电视大屏、投屏</td></tr>
+                <tr><td><b>备用线路</b></td><td>1080P</td><td>约 0.8GB／46 分钟</td><td>常规线路加载失败时</td></tr>
+                <tr><td><b>修复版线路</b></td><td>1080P</td><td>约 2.6GB／112 分钟</td><td>电影完整回看</td></tr>
+                <tr><td><b>生肉线路</b></td><td>720P</td><td>约 0.5GB／集</td><td>需自行匹配字幕</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="block" id="faq" aria-labelledby="h-faq">
+          <div class="block-head">
+            <span class="kicker">07 / 常见问题</span>
+            <h2 id="h-faq">关于条目、字幕与更新日</h2>
+          </div>
+          <div class="faq">
+            <details open>
+              <summary>连载剧的“更新至第 N 集”多久会变一次？</summary>
+              <div class="ans"><p>取决于该剧的排播。《雾港档案》按周二、四、六更新，11月8日是周六，第6集上线后，第7集预计 11月10日出现。目录只在下一次更新实际发生后才改数字，不会提前把“更新至第7集”写上。若超过标注更新日 24 小时仍无变化，条目页会补一行“延迟说明”。</p></div>
+            </details>
+            <details>
+              <summary>《河床之上》的 4K 版和 1080P 版内容一样吗？</summary>
+              <div class="ans"><p>内容一致，都是 4 集、单集 52 分钟，旁白与字幕相同。差别在文件体积与加载时间，4K 版单集约 2.2GB，手机端首次加载比 1080P 多 3 到 5 秒。大屏观看选 4K，移动端观看选 1080P 更稳。</p></div>
+            </details>
+            <details>
+              <summary>《山区教室》的简中与繁中字幕为什么会不一样？</summary>
+              <div class="ans"><p>两版由不同校对人员完成，术语选择不同。第8集里“补习班”与“课后辅导”指同一场景，两版都不算错。若要引用台词做笔记，建议注明取自哪一版，例如“简中·第8集·02:14”。</p></div>
+            </details>
+            <details>
+              <summary>备用线路加载慢，是不是片源有问题？</summary>
+              <div class="ans"><p>多数情况是线路本身的带宽分配，不是片源损坏。11月8日抽测中，备用线路首次加载平均 6 秒，常规线路约 2 秒。若同一部片在备用线路反复崩溃两次以上，记录条目名与时间点，目录会在下一轮核对时优先检查该线路。</p></div>
+            </details>
+            <details>
+              <summary>标“生肉”的条目怎么处理字幕？</summary>
+              <div class="ans"><p>这类条目只有视频文件，没有内嵌字幕，目录会注明语言与片长，例如“日语·1080P·112分钟”。可自行加载外挂字幕，文件名与视频文件同名即可匹配；时间轴不一致时需手动微调偏移量。</p></div>
+            </details>
+            <details>
+              <summary>为什么有的片子只有 720P？</summary>
+              <div class="ans"><p>与片源获取渠道有关。冷门地区电影与原片归档较早的纪录片，常见最高只有 720P。目录不会把 720P 标成 1080P，条目标题旁会显示实际档位；如果后续拿到更高清晰度片源，会在“最新更新”里补一条替换记录。</p></div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 用户评论 -->
+        <section class="block" id="comments" aria-labelledby="h-comments">
+          <div class="block-head">
+            <span class="kicker">08 / 用户评论</span>
+            <h2 id="h-comments">观众在条目下留了什么话</h2>
+          </div>
+          <p class="block-desc">选取的是带具体条目名的评论，只描述感受、不指向条目的评论未收录。</p>
+          <div class="comments">
+            <div class="cmt">
+              <div class="who"><span class="avatar">陈</span><b>陈雨舟</b><time>11-08</time></div>
+              <p>《雾港档案》第6集把提货单那条线接回来了，第5集字幕勘误之后再看一遍，前后能对上。</p>
+              <span class="quote">条目：雾港档案 第6集</span>
+            </div>
+            <div class="cmt">
+              <div class="who"><span class="avatar a2">林</span><b>林一苇</b><time>11-08</time></div>
+              <p>4K 版《河床之上》在电视上看确实清楚，河床裂纹都能数出来；手机加载慢，切回 1080P 了。</p>
+              <span class="quote">条目：河床之上 4K</span>
+            </div>
+            <div class="cmt">
+              <div class="who"><span class="avatar a3">赵</span><b>赵启明</b><time>11-07</time></div>
+              <p>《长街灯火雨》说 11月1日更新第9集，今天都 7 号了还没第10集，条目页也没个说法。等得有点烦。</p>
+              <span class="quote">条目：长街灯火雨</span>
+            </div>
+            <div class="cmt">
+              <div class="who"><span class="avatar a4">吴</span><b>吴桐</b><time>11-07</time></div>
+              <p>双语字幕这个做法好，日剧术语不会被翻得稀奇古怪，《山区教室》第8集两句译法不同，反而能对照着理解。</p>
+              <span class="quote">条目：山区教室 第8集</span>
+            </div>
+            <div class="cmt">
+              <div class="who"><span class="avatar a5">周</span><b>周慕之</b><time>11-06</time></div>
+              <p>修复版《夜班列车》暗部好多了，结尾那场站台戏终于不用眯着眼看。片长没变，好评。</p>
+              <span class="quote">条目：夜班列车 修复版</span>
+            </div>
+            <div class="cmt">
+              <div class="who"><span class="avatar a2">何</span><b>何思远</b><time>11-05</time></div>
+              <p>《江南食帧》第3集讲酱园，28 分钟刚好，但是发酵那部分讲得太快，想多看点翻缸的镜头。</p>
+              <span class="quote">条目：江南食帧 第3集</span>
+            </div>
+            <div class="cmt">
+              <div class="who"><span class="avatar a3">郑</span><b>郑望舒</b><time>11-05</time></div>
+              <p>《工程师笔记》结局篇第10到12集连看比较顺，中间停一晚再捡起来要重新回忆人物关系，建议按集数一口气看完。</p>
+              <span class="quote">条目：工程师笔记 第10-12集</span>
+            </div>
+            <div class="cmt">
+              <div class="who"><span class="avatar">孙</span><b>孙立群</b><time>11-04</time></div>
+              <p>标“生肉”的那部西班牙电影，自己下的字幕轴差了 2 秒，调了偏移量才对上。步骤麻烦，但确实能看。</p>
+              <span class="quote">条目：生肉线路 西班牙电影</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 相关资讯 -->
+        <section class="block" id="news" aria-labelledby="h-news">
+          <div class="block-head">
+            <span class="kicker">09 / 相关资讯</span>
+            <h2 id="h-news">档期与片源方面的四条动态</h2>
+          </div>
+          <div class="news-grid">
+            <div class="news">
+              <time>11-08</time>
+              <h3>《雾港档案》排播保持每周三更</h3>
+              <p>第6集上线后，条目页明确写出下三集日期：11月10日、12日、14日。这是本季度首部把排播表直接挂在条目页的华语悬疑剧。</p>
+            </div>
+            <div class="news">
+              <time>11-07</time>
+              <h3>《周末厨房实验室》上线晚一天</h3>
+              <p>11月7日电视台播出第14期，目录 11月8日上午出现条目，比播出晚约 15 小时。综艺频道说明为“字幕校对加时”。</p>
+            </div>
+            <div class="news">
+              <time>11-06</time>
+              <h3>华语剧频道调整清晰度标注方式</h3>
+              <p>原“高清”“超清”两种叫法统一为 1080P 与 4K，连载剧条目页同步改名，历史条目在 11月6日当天完成替换。</p>
+            </div>
+            <div class="news">
+              <time>11-04</time>
+              <h3>《河床之上》4K 版占用两条线路</h3>
+              <p>4K 与 1080P 并存期间，纪录片频道把两者分到不同线路，避免大文件挤占常规线路带宽。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 补充板块：更新节奏时间线 -->
+        <section class="block" id="timeline" aria-labelledby="h-timeline">
+          <div class="block-head">
+            <span class="kicker">10 / 更新节奏</span>
+            <h2 id="h-timeline">一周内发生变化的节点</h2>
+          </div>
+          <ol class="timeline">
+            <li><b>11月2日 · 星期一</b><span>《夜班列车》修复版替换原片源，体积由 1.8GB 增至 2.6GB。</span></li>
+            <li><b>11月4日 · 星期三</b><span>《河床之上》4K 版补入，与 1080P 版并存。</span></li>
+            <li><b>11月5日 · 星期四</b><span>《江南食帧》第3集上线，短篇档满 3 集。</span></li>
+            <li><b>11月6日 · 星期五</b><span>频道清晰度标注统一为 1080P／4K；《雾港档案》第5集完成一处字幕勘误。</span></li>
+            <li><b>11月7日 · 星期六</b><span>《山区教室》第8集更新，与日本播出间隔 3 天。</span></li>
+            <li><b>11月8日 · 星期日</b><span>《雾港档案》第6集、《城市边缘的十种职业》第2集同日上线。</span></li>
+          </ol>
+        </section>
+
+        <!-- 相关推荐标签 -->
+        <section class="block" id="tags" aria-labelledby="h-tags">
+          <div class="block-head">
+            <span class="kicker">11 / 相关推荐</span>
+            <h2 id="h-tags">常被搜索的长尾入口</h2>
+          </div>
+          <p class="block-desc">标签按观众实际输入习惯整理，点开可回到对应区块，不跳转到站外页面。</p>
+          <div class="tag-cloud">
+            <a href="/#featured">雾港档案更新到第几集</a>
+            <a href="/#featured">河床之上4K纪录片在线看</a>
+            <a href="/#latest">2026年华语悬疑剧连载</a>
+            <a href="/#latest">日剧山区教室双语字幕</a>
+            <a href="/#guide">程序员职场剧工程师笔记</a>
+            <a href="/#guide">纪录片短篇30分钟以内</a>
+            <a href="/#featured">夜班列车修复版画质对比</a>
+            <a href="/#faq">生肉条目怎么配外挂字幕</a>
+            <a href="/#channels">完结12集以内一次看完</a>
+            <a href="/#latest">江南食帧绍兴酱园那集</a>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- 侧栏 -->
+      <aside class="side-col" aria-label="侧栏导航与榜单">
+        <div class="side-card">
+          <h2>栏目导航</h2>
+          <ul class="side-nav" id="side-nav">
+            <li><a href="/#overview">领域概览</a></li>
+            <li><a href="/#featured">精选推荐</a></li>
+            <li><a href="/#latest">最新更新</a></li>
+            <li><a href="/#channels">分类入口</a></li>
+            <li><a href="/#deep">深度解析</a></li>
+            <li><a href="/#guide">体验指南</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+            <li><a href="/#comments">用户评论</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#timeline">更新节奏</a></li>
+            <li><a href="/#tags">相关推荐</a></li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h2>本周更新稳定度榜</h2>
+          <ol class="rank">
+            <li><span>雾港档案<small>4 次更新 · 平均间隔 2.3 天</small></span></li>
+            <li><span>山区教室<small>3 次更新 · 与日本播出同步</small></span></li>
+            <li><span>江南食帧<small>3 集在档 · 单集 28 分钟</small></span></li>
+            <li><span>工程师笔记<small>11月3日完结 · 全12集</small></span></li>
+            <li><span>河床之上<small>4K 补档 · 4 集完整</small></span></li>
+          </ol>
+          <div class="side-note">榜单只按更新稳定度排序，不按播放量。播放量数据目录未采集，因此不设热度标签。</div>
+        </div>
+        <div class="side-card">
+          <h2>核对日期与口径</h2>
+          <div class="side-note">本页条目信息核对于 11月8日，覆盖 11月2日至11月8日的上线与替换记录。清晰度、字幕来源、片长三项以条目页当前标注为准；标注不一致时，以“最新更新”里的替换记录为准。</div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="foot-in">
+    <div class="foot-brand">
+      <div class="fb-name">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#1b2c4c"/>
+          <path d="M16 18h9l16 28H32z" fill="#e8a33d"/>
+          <path d="M38 18h9L31 46h-9z" fill="#2ea89b" opacity=".9"/>
+        </svg>
+        51hlw免费在线观看
+      </div>
+      <p>把剧集、电影、纪录片按更新日排成目录，条目先写情报，再谈观看。</p>
+    </div>
+    <div class="foot-col">
+      <h3>频道</h3>
+      <ul>
+        <li><a href="/#featured">华语悬疑剧</a></li>
+        <li><a href="/#featured">日韩家庭剧</a></li>
+        <li><a href="/#latest">电影与修复版</a></li>
+        <li><a href="/#latest">纪录片短篇</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h3>查找</h3>
+      <ul>
+        <li><a href="/#channels">题材分类入口</a></li>
+        <li><a href="/#latest">按更新日浏览</a></li>
+        <li><a href="/#tags">常用长尾标签</a></li>
+        <li><a href="/#guide">线路与清晰度对照</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h3>说明</h3>
+      <ul>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">用户评论</a></li>
+        <li><a href="/#timeline">一周更新节奏</a></li>
+        <li><a href="/#overview">目录口径</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>条目信息为示例数据，核对日期 2026年11月8日，更新项见“最新更新”栏目。</span>
+    <span>© 2026 51hlw免费在线观看　内容仅作目录展示，片源与字幕版权归各自权利人所有。</span>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" type="button" aria-label="回到页面顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 搜索：本地查找，无结果给出反馈 */
+  var form = document.getElementById('search-form');
+  var input = document.getElementById('q');
+  var note = document.getElementById('search-note');
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main .block, main .hero'));
+
+  function runSearch(){
+    var kw = (input.value || '').trim();
+    if(!kw){
+      note.classList.remove('on');
+      note.textContent = '';
+      return;
+    }
+    var terms = kw.toLowerCase().split(/\s+/).filter(Boolean);
+    var hits = [];
+    sections.forEach(function(sec){
+      var text = (sec.textContent || '').toLowerCase();
+      var ok = terms.every(function(t){ return text.indexOf(t) !== -1; });
+      if(ok){
+        var h = sec.querySelector('h1,h2');
+        hits.push(h ? h.textContent.trim() : '未命名区块');
+      }
+    });
+    note.classList.add('on');
+    if(hits.length){
+      note.textContent = '找到 ' + hits.length + ' 个相关区块：' + hits.join('、');
+    }else{
+      note.textContent = '没有匹配“' + kw + '”的条目或分类。可尝试剧名片段、题材词（悬疑、纪录片）或年份（2026）。';
+    }
+  }
+  if(input){
+    input.addEventListener('input', runSearch);
+  }
+  if(form){
+    form.addEventListener('submit', function(e){ e.preventDefault(); runSearch(); });
+  }
+
+  /* 移动端菜单 */
+  var menuBtn = document.getElementById('menu-btn');
+  var nav = document.getElementById('theme-nav');
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 760){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && nav.classList.contains('open')){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.focus();
+      }
+    });
+  }
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('to-top');
+  function onScroll(){
+    if(window.scrollY > 520){ toTop.classList.add('on'); }
+    else{ toTop.classList.remove('on'); }
+    highlight();
+  }
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* 侧栏滚动高亮 */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('#side-nav a'));
+  var targets = navLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  });
+  function highlight(){
+    var pos = window.scrollY + 150;
+    var current = -1;
+    targets.forEach(function(el, i){
+      if(el && el.offsetTop <= pos){ current = i; }
+    });
+    navLinks.forEach(function(a, i){
+      if(i === current){ a.classList.add('active'); }
+      else{ a.classList.remove('active'); }
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  onScroll();
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "51hlw免费在线观看",
+      "inLanguage": "zh-CN",
+      "description": "按题材、年份、片长与更新日整理的影视目录，涵盖华语剧、日韩剧、电影与纪录片。",
+      "keywords": "51hlw免费在线观看"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "连载剧的“更新至第 N 集”多久会变一次？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "取决于该剧的排播。《雾港档案》按周二、四、六更新，11月8日第6集上线后，第7集预计11月10日出现。目录只在下一次更新实际发生后修改数字，不会提前标注。超过标注更新日24小时仍无变化，条目页会补一行延迟说明。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "《河床之上》的 4K 版和 1080P 版内容一样吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "内容一致，都是4集、单集52分钟，旁白与字幕相同。差别在文件体积与加载时间，4K版单集约2.2GB，手机端首次加载比1080P多3到5秒。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "《山区教室》的简中与繁中字幕为什么会不一样？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "两版由不同校对人员完成，术语选择不同。第8集里“补习班”与“课后辅导”指同一场景，两版都不算错。引用台词做笔记时建议注明取自哪一版。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "备用线路加载慢，是不是片源有问题？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "多数情况是线路本身的带宽分配，不是片源损坏。11月8日抽测中，备用线路首次加载平均6秒，常规线路约2秒。同一部片在备用线路反复崩溃两次以上，记录条目名与时间点，目录会在下一轮核对时优先检查该线路。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "标“生肉”的条目怎么处理字幕？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "这类条目只有视频文件，没有内嵌字幕，目录会注明语言与片长。可自行加载外挂字幕，文件名与视频文件同名即可匹配；时间轴不一致时需手动微调偏移量。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "为什么有的片子只有 720P？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "与片源获取渠道有关。冷门地区电影与原片归档较早的纪录片，常见最高只有720P。目录不会把720P标成1080P，条目标题旁会显示实际档位。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</body>
+                                            </html>
